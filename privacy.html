@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+<!-- Google tag (gtag.js) met Consent Mode v2: analytics staat uit tot de bezoeker akkoord geeft -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});
+try{if(localStorage.getItem('revered-consent')==='granted'){gtag('consent','update',{'analytics_storage':'granted'});}}catch(e){}
+gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3MCDM39H8"></script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacyverklaring | Revered</title>
@@ -154,7 +163,7 @@
       <p>De partij die het formulier technisch verwerkt en de partij die de website host. Zodra de site live is, staan hun namen hier. We sluiten met zulke partijen een verwerkersovereenkomst. Verder deelt Revered je gegevens met niemand, tenzij de wet dat verplicht.</p>
 
       <h2 id="cookies">Cookies en meten op deze site</h2>
-      <p>Op dit moment plaatst deze site geen cookies voor tracking en gebruikt hij geen analytics. Lettertypen worden geladen via Google Fonts; daarbij ziet Google je IP-adres. Als we later wel statistieken gaan bijhouden, staat dat hier, met wat er gemeten wordt en hoe je dat kunt weigeren.</p>
+      <p>Deze site gebruikt Google Analytics 4 om te zien hoeveel bezoekers er zijn, welke pagina's ze lezen en waar ze vandaan komen. Dat gebeurt alleen als je daar bij je eerste bezoek toestemming voor geeft via de balk onderaan. Zeg je "liever niet", dan plaatst Google Analytics geen cookies en wordt er niets aan je gekoppeld. Je keuze bewaren we lokaal in je browser (geen cookie van derden); je kunt hem wissen door de sitegegevens van revered.nl te verwijderen, dan vragen we het opnieuw. IP-adressen worden geanonimiseerd en we gebruiken de gegevens niet voor advertenties of profielen. Lettertypen worden geladen via Google Fonts; daarbij ziet Google je IP-adres.</p>
 
       <h2 id="rechten">Wat je kunt vragen</h2>
       <p>Inzage in wat we van je hebben, correctie, verwijdering, en bezwaar tegen een verwerking. Stuur je verzoek via het contactformulier; je hoort binnen 2 werkdagen van een van de founders. Ben je het niet met ons eens, dan kun je een klacht indienen bij de Autoriteit Persoonsgegevens.</p>
@@ -202,5 +211,20 @@
 })();
 </script>
 
+<!-- Cookiebanner: alleen voor Google Analytics, keuze wordt lokaal onthouden -->
+<div id="cookiebanner" role="dialog" aria-live="polite" aria-label="Cookies" hidden>
+  <p>Mogen we anoniem meten hoe deze site gebruikt wordt (Google Analytics)? Geen advertenties, geen doorverkoop. <a href="privacy.html#cookies">Lees wat we meten</a>.</p>
+  <div class="cookiebanner-knoppen">
+    <button type="button" class="knop" id="cookie-ja">Ja, meten mag</button>
+    <button type="button" class="knop knop-licht" id="cookie-nee">Liever niet</button>
+  </div>
+</div>
+<script>
+(function(){var b=document.getElementById('cookiebanner');if(!b)return;var k;try{k=localStorage.getItem('revered-consent');}catch(e){}
+if(k==='granted'||k==='denied')return;b.hidden=false;
+function kies(v){try{localStorage.setItem('revered-consent',v);}catch(e){}if(v==='granted'&&window.gtag){gtag('consent','update',{'analytics_storage':'granted'});}b.hidden=true;}
+document.getElementById('cookie-ja').addEventListener('click',function(){kies('granted');});
+document.getElementById('cookie-nee').addEventListener('click',function(){kies('denied');});})();
+</script>
 </body>
 </html>

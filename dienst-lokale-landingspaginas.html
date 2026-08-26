@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+<!-- Google tag (gtag.js) met Consent Mode v2: analytics staat uit tot de bezoeker akkoord geeft -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});
+try{if(localStorage.getItem('revered-consent')==='granted'){gtag('consent','update',{'analytics_storage':'granted'});}}catch(e){}
+gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3MCDM39H8"></script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lokale landingspagina&#x27;s: een pagina per plaats, €250 per maand | Revered</title>
@@ -319,5 +328,20 @@
 })();
 </script>
 
+<!-- Cookiebanner: alleen voor Google Analytics, keuze wordt lokaal onthouden -->
+<div id="cookiebanner" role="dialog" aria-live="polite" aria-label="Cookies" hidden>
+  <p>Mogen we anoniem meten hoe deze site gebruikt wordt (Google Analytics)? Geen advertenties, geen doorverkoop. <a href="privacy.html#cookies">Lees wat we meten</a>.</p>
+  <div class="cookiebanner-knoppen">
+    <button type="button" class="knop" id="cookie-ja">Ja, meten mag</button>
+    <button type="button" class="knop knop-licht" id="cookie-nee">Liever niet</button>
+  </div>
+</div>
+<script>
+(function(){var b=document.getElementById('cookiebanner');if(!b)return;var k;try{k=localStorage.getItem('revered-consent');}catch(e){}
+if(k==='granted'||k==='denied')return;b.hidden=false;
+function kies(v){try{localStorage.setItem('revered-consent',v);}catch(e){}if(v==='granted'&&window.gtag){gtag('consent','update',{'analytics_storage':'granted'});}b.hidden=true;}
+document.getElementById('cookie-ja').addEventListener('click',function(){kies('granted');});
+document.getElementById('cookie-nee').addEventListener('click',function(){kies('denied');});})();
+</script>
 </body>
 </html>
