@@ -1,0 +1,19 @@
+# Revered website (revered.nl)
+
+Deze map is een git-repo: origin = https://github.com/reveredbusiness/Netlify (branch `main`).
+Netlify (project `revered-nl`) deployt elke push naar `main` automatisch naar https://revered.nl.
+
+## Wijzigingen live zetten
+```
+git add -A
+git commit -m "korte beschrijving"
+git push origin main
+```
+Na de push is de site binnen ±1 minuut bijgewerkt. Commit als Revered <reveredbusiness@gmail.com> (staat in de lokale git-config).
+
+## Regels
+- Statische site, geen build-stap: wat hier staat, staat live. Publish directory = root.
+- Elke HTML-pagina heeft in `<head>` de GA4-snippet (G-Z3MCDM39H8, consent mode) en vlak voor `</body>` de cookiebanner. Nieuwe pagina: kopieer beide uit een bestaande pagina.
+- Nieuwe indexeerbare pagina: ook toevoegen aan sitemap.xml (en kennisbank.html als het een gids is).
+- Huisstijl en inhoudsregels: zie README.md. Prijzen staan op één plek als bron (merk/REVERED-diensten-en-prijzen.md, buiten deze repo).
+- Doe geen `git push --force`.
