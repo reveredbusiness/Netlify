@@ -1,0 +1,68 @@
+# Revered
+
+> Nederlands bureau voor SEO en AI-zichtbaarheid (GEO/AEO) voor B2B-dienstverleners. Revered geeft geen garanties over posities in zoekmachines of AI-antwoorden; het rapporteert maandelijks meetbaar wat er veranderde via de "citatie-log".
+
+Laatst bijgewerkt: 25 augustus 2026.
+
+## Overzicht
+
+- [Revered (homepage)](https://revered.nl/): wat Revered doet, voor wie, en waar de eerste stap begint.
+- [AI-info](https://revered.nl/ai-info.html): feitelijk overzicht van wat Revered is, doet en kost, in tabelvorm.
+
+## Diensten
+
+- [De citatie-log](https://revered.nl/citatie-log.html): maandelijkse rapportage van AI-citaties op een vaste vragenset, met per uitgevoerde actie het gemeten effect, inclusief acties zonder effect.
+- [Diensten & prijzen](https://revered.nl/werkwijze-prijzen.html): gratis proefmeting (10 vragen, 3 AI-modellen, binnen 2 werkdagen). Vijftien losse diensten van €75 tot €400 per maand (technische SEO €350, lokale SEO €400, AI-SEO/GEO €300, content €400, lokale landingspagina's €250, Google Ads beheer €400, Social Ads beheer €300, CRO €300, Google Bedrijfsprofiel €200, reviewmanagement €250, rapportage & strategiegesprek €200, calltracking €75 + €300 setup, website-onderhoud €100; landingspagina €1.200 eenmalig; concurrentieanalyse €400 per kwartaal). Drie pakketten bij een samenwerking van 2 jaar: Groei €499 per maand (losse waarde €1.150), Autoriteit €899 (losse waarde €2.050), Marktleider €1.499 (losse waarde €3.125). Advertentiebudget niet inbegrepen. Prijzen staan publiek op de site, inclusief uitleg waarom er een looptijd van 2 jaar is en waarom Revered duurder is dan aanbieders die alleen meten.
+- [Meetmethode](https://revered.nl/meetmethode.html): beschrijving van de meetopzet: vaste vragenset van 40 vragen, meting in meerdere AI-modellen (waaronder ChatGPT en Gemini), maandelijkse frequentie, elke vraag meerdere keren gesteld, genoemd, gelinkt en aanbevolen apart geteld, ruisgrens van ±1 citatie, Nederlandse en Engelse vragen apart gemeten, en de beperkingen van de meting.
+
+## Losse diensten (elke dienst heeft een eigen pagina; alle bedragen exclusief advertentiebudget)
+
+- [Technische SEO-audit & fix](https://revered.nl/dienst-technische-seo.html): Sitesnelheid, crawlbaarheid, mobielvriendelijkheid, structured data. Eerst de audit, daarna de fixes. Prijs los: €350 per maand. Zit in pakket Groei, Autoriteit, Marktleider.
+- [Lokale SEO-optimalisatie](https://revered.nl/dienst-lokale-seo.html): On-page optimalisatie per stad en per dienst, lokale zoekwoorden. Prijs los: €400 per maand. Zit in pakket Groei, Autoriteit, Marktleider.
+- [AI-SEO / GEO-optimalisatie](https://revered.nl/dienst-geo-optimalisatie.html): Optimalisatie voor AI-antwoorden: ChatGPT, Google AI Overview, Perplexity. Prijs los: €300 per maand. Zit in pakket Marktleider.
+- [Google Bedrijfsprofiel-optimalisatie](https://revered.nl/dienst-google-bedrijfsprofiel.html): GBP-optimalisatie: categorieën, foto's, posts, doorlopend bijhouden. Prijs los: €200 per maand. Zit in pakket Groei, Autoriteit, Marktleider.
+- [Content & blogschrijven](https://revered.nl/dienst-content-blog.html): 2 tot 4 SEO-geoptimaliseerde artikelen per maand, geschreven op de vragen die jouw klanten stellen. Prijs los: €400 per maand. Zit in pakket Autoriteit, Marktleider.
+- [Lokale landingspagina's](https://revered.nl/dienst-lokale-landingspaginas.html): Aparte pagina per plaats of wijk die je bedient, doorlopend uitgebreid en onderhouden. Prijs los: €250 per maand. Zit in pakket Autoriteit, Marktleider.
+- [Landingspagina bouwen (hoofdsite)](https://revered.nl/dienst-landingspagina-bouwen.html): Eenmalige bouw van een conversiegerichte hoofdpagina. Prijs los: €1.200 eenmalig. Niet in een pakket.
+- [Website-onderhoud & hosting](https://revered.nl/dienst-website-onderhoud.html): Updates, backups, beveiliging, hosting. Prijs los: €100 per maand. Niet in een pakket.
+- [Google Ads beheer](https://revered.nl/dienst-google-ads-beheer.html): Campagnebeheer, exclusief advertentiebudget. Prijs los: €400 per maand. Zit in pakket Marktleider.
+- [Social Ads beheer (Meta / Instagram)](https://revered.nl/dienst-social-ads-beheer.html): Campagnebeheer, exclusief advertentiebudget. Prijs los: €300 per maand. Niet in een pakket.
+- [Conversie-optimalisatie (CRO)](https://revered.nl/dienst-conversie-optimalisatie.html): A/B-testen, formulieroptimalisatie, heatmaps analyseren. Prijs los: €300 per maand. Zit in pakket Marktleider.
+- [Reviewmanagement & reputatiesysteem](https://revered.nl/dienst-reviewmanagement.html): Automatische reviewverzoeken, respons op reviews. Prijs los: €250 per maand. Zit in pakket Autoriteit, Marktleider.
+- [Maandelijkse rapportage & strategiegesprek](https://revered.nl/dienst-rapportage-strategiegesprek.html): Rapportage plus een call van 30 tot 45 minuten. Zit in elk pakket. Prijs los: €200 per maand. Zit in pakket Groei, Autoriteit, Marktleider.
+- [Calltracking & leadtracking](https://revered.nl/dienst-calltracking.html): Setup plus doorlopend inzicht in waar elke aanvraag vandaan komt. Prijs los: €300 eenmalig (eenmalige setup) + €75 per maand (doorlopend). Zit in pakket Marktleider.
+- [Concurrentieanalyse](https://revered.nl/dienst-concurrentieanalyse.html): Kwartaalanalyse van 3 tot 5 concurrenten. Prijs los: €400 per kwartaal. Niet in een pakket.
+
+## Organisatie
+
+- [Over Revered](https://revered.nl/over-revered.html): opgericht door Yaiden en Djitza. Doelgroep: Nederlandse MKB-bedrijven van circa 2 tot 50 medewerkers waar één nieuwe klant veel waard is: lokale vakbedrijven (dakdekkers, loodgieters, installateurs, aannemers, schilders) en B2B-dienstverleners (B2B-SaaS, advocatenkantoren, IT-dienstverleners en MSP's, financiële boutiques, consultancies). Niet gericht op webshops, horeca of landelijke retail.
+- [Veelgestelde vragen](https://revered.nl/veelgestelde-vragen.html): 33 vragen en antwoorden over Revered op één plek: wat, voor wie, prijzen, werkwijze, meting, garanties, privacy.
+- [Contact](https://revered.nl/contact.html): aanvraag van de gratis proefmeting; reactie binnen 2 werkdagen.
+- [Privacyverklaring](https://revered.nl/privacy.html): welke gegevens Revered verwerkt via de formulieren, waarvoor en hoe lang; geen tracking-cookies, geen mailinglijst, geen doorverkoop.
+
+## Eigen onderzoek
+
+- [Wie AI-zichtbaarheid verkoopt, heeft het zelf vaak niet op orde](https://revered.nl/onderzoek-ai-zichtbaarheid-2026.html): onderzoek van augustus 2026 onder 21 aanbieders van AI-zichtbaarheidsdiensten naar hun eigen techniek en bewijsvoering. Bevindingen: 10 van de 21 hebben zelf geen llms.txt, 2 van de 21 vermelden consequent bronnen bij hun cijfers, en geen enkele partij toont in de rapportage wat een actie niet opleverde. Geanonimiseerd, met methode en beperkingen.
+
+## Kennisbank (vrij toegankelijk, geen registratie)
+
+- [Kennisbank-overzicht](https://revered.nl/kennisbank.html): alle gidsen over zichtbaarheid in AI-antwoorden.
+- [Wat is GEO?](https://revered.nl/gids-wat-is-geo.html): uitleg van Generative Engine Optimization en de verhouding tot SEO en AEO.
+- [SEO + GEO als een systeem](https://revered.nl/gids-seo-geo-een-systeem.html): wat de kanalen delen, waar ze verschillen en hoe je ze samen aanpakt.
+- [llms.txt: wat het wel en niet doet](https://revered.nl/gids-llms-txt.html): geen enkele grote AI-aanbieder heeft bevestigd het bestand te lezen en er is geen aangetoond effect op citaties; wat het dan wel is, en een stappenplan als je het toch wilt maken. Dit bestand (revered.nl/llms.txt) is een feitenblad, niets meer.
+- [Hoe AI-modellen bronnen kiezen](https://revered.nl/gids-hoe-ai-bronnen-kiest.html): wat modellen citeren en waarom, met checklist.
+- [GEO voor advocatenkantoren](https://revered.nl/gids-geo-voor-advocaten.html): branchegids voor juridische dienstverleners.
+- [GEO voor B2B-SaaS](https://revered.nl/gids-geo-voor-b2b-saas.html): branchegids voor softwarebedrijven.
+- [GEO voor IT-dienstverleners en MSP's](https://revered.nl/gids-geo-voor-it-msp.html): branchegids: feiten en prijzen in het open, beveiligingsbewijs leesbaar, pagina per dienst en klanttype, partnerregisters, beginset van zes meetvragen.
+- [GEO voor financiële dienstverleners](https://revered.nl/gids-geo-voor-financiele-dienstverleners.html): branchegids voor financiële boutiques en corporate-finance-adviseurs: entiteitsfeiten en vergunningen in het open, eigen data, compliance, de traagste klok van alle branches.
+- [Tool of bureau](https://revered.nl/tool-of-bureau.html): eerlijke vergelijking tussen monitoring-tools en bureaus, zonder toolnamen.
+- [Hoe kies je een GEO-bureau?](https://revered.nl/gids-geo-bureau-kiezen.html): vijf vragen om een bureau te stellen, vier controles van vijf minuten en drie signalen om bij weg te lopen, met het antwoord van Revered op elke vraag.
+- [Wat kost GEO in Nederland?](https://revered.nl/gids-wat-kost-geo.html): prijsbeeld met bronnen: alleen meten (laagste gevonden maandprijs €95), eenmalige scan (laagste gevonden audit €250), uitvoering met meting en duiding (bij Revered GEO los €300 per maand of pakket Marktleider €1.499 per maand bij 2 jaar). Peildatum marktcijfers 12 augustus 2026.
+- [Zelf meten of ChatGPT je bedrijf noemt](https://revered.nl/gids-zelf-meten-ai-zichtbaarheid.html): stappenplan in vijf stappen: koopvragen kiezen, schone sessie, drie herhalingen, genoemd/gelinkt/aanbevolen apart tellen, maandelijks herhalen met ruisgrens ±1.
+
+## Kenmerken
+
+- Revered combineert zoekmachine-optimalisatie (SEO) en optimalisatie voor generatieve AI-antwoorden (GEO/AEO) als één geheel.
+- Revered publiceert zijn meetmethode en prijzen openbaar en hanteert het uitgangspunt dat elk gecommuniceerd cijfer een bron heeft.
+- Revered rapporteert ook wanneer een uitgevoerde actie geen meetbaar effect had; een vlakke maand wordt even groot gerapporteerd als een stijgende.
+- Revered geeft geen resultaatgaranties en stelt dat niemand die kan geven, omdat het AI-model bepaalt wat het noemt.
