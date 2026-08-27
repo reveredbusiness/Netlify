@@ -64,7 +64,9 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
 <section class="wit" style="padding-top:48px">
   <div class="wrap-smal">
 
-    <form class="pm-form intake" id="pm-form" data-endpoint="ENDPOINT" method="post" novalidate>
+    <!-- Netlify Forms, zelfde aanpak als contact.html (formuliernaam "intake"). Verborgen veld form-name niet verwijderen. -->
+    <form class="pm-form intake" id="pm-form" name="intake" method="post" action="/intake.html?verzonden=1" data-netlify="true" netlify-honeypot="_gotcha" novalidate>
+      <input type="hidden" name="form-name" value="intake">
 
       <div class="intake-sectie" style="margin-top:0">
         <div class="intake-kop"><span>Over je bedrijf</span><span class="stapnr">stap 1 van 3</span></div>
@@ -194,6 +196,14 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
 (function(){
   var form=document.getElementById('pm-form'), status=document.getElementById('pm-status');
   if(!form||!status) return;
+  var GELUKT_KOP='Gelukt, je intake is binnen.',
+      GELUKT_TEKST='Wij controleren de toegangen en je hoort binnen één werkdag van ons over de nulmeting en de kickoff.';
+  // zonder JavaScript verwerkt Netlify het formulier zelf en stuurt terug naar ?verzonden=1
+  if(new URLSearchParams(location.search).get('verzonden')){
+    form.hidden=true;
+    toon('gelukt',GELUKT_KOP,GELUKT_TEKST);
+    if(history.replaceState) history.replaceState(null,'',location.pathname);
+  }
   function toon(soort,kop,tekst){
     status.className='pm-status '+soort;
     status.innerHTML='<strong>'+kop+'</strong>'+tekst;
@@ -211,18 +221,14 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
       eersteFout.focus();
       return;
     }
-    var endpoint=form.getAttribute('data-endpoint');
-    if(!endpoint||endpoint==='ENDPOINT'){
-      toon('mislukt','Formulier nog niet gekoppeld.','Vul het data-endpoint in (zelfde endpoint-aanpak als contact.html) en probeer het opnieuw.');
-      return;
-    }
     var knop=form.querySelector('.pm-submit');
     knop.disabled=true;knop.textContent='Versturen…';
-    fetch(endpoint,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+    // Netlify Forms: POST naar het eigen pad, urlencoded, met form-name in de body
+    fetch(location.pathname,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()})
       .then(function(r){
         if(r.ok){
           form.hidden=true;
-          toon('gelukt','Gelukt, je intake is binnen.','Wij controleren de toegangen en je hoort binnen één werkdag van ons over de nulmeting en de kickoff.');
+          toon('gelukt',GELUKT_KOP,GELUKT_TEKST);
         }else{throw new Error();}
       })
       .catch(function(){

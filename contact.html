@@ -140,17 +140,22 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
 <section class="wit">
   <div class="wrap-smal">
     <!-- ===================================================================
-         FORMULIER-HANDLER: vervang hieronder ENDPOINT door je eigen adres.
-         Formspree (werkt op elke statische host): maak een gratis formulier
-         aan op formspree.io en zet hier https://formspree.io/f/JOUWCODE neer.
-         Netlify: verwijder het data-endpoint en zet in plaats daarvan
-         action="/" en netlify op het form-element.
-         Eigen backend: zet de POST-URL neer; het script verstuurt JSON-vrije
-         multipart-data en verwacht een 2xx-statuscode terug.
-         Zolang hier ENDPOINT staat, toont het formulier eerlijk dat het nog
-         niet verzendt in plaats van te doen alsof.
+         FORMULIER-HANDLER: Netlify Forms (de host van deze site).
+         Netlify leest bij elke deploy de HTML en registreert elk formulier
+         met data-netlify="true" onder zijn name (hier: "proefmeting").
+         Eenmalig nodig in het Netlify-dashboard (zie README, punt 4):
+           1. Site configuration > Forms > "Enable form detection" aan,
+              daarna één keer opnieuw deployen.
+           2. Site configuration > Notifications > Form submission
+              notifications > e-mailadres toevoegen voor "proefmeting".
+         Het script hieronder verstuurt urlencoded naar het eigen pad; zonder
+         JavaScript verwerkt Netlify het formulier zelf en stuurt terug naar
+         action (?verzonden=1), waarop dezelfde bevestiging verschijnt.
+         Verwijder nooit het verborgen veld form-name: zonder dat veld weet
+         Netlify niet bij welk formulier een inzending hoort.
          =================================================================== -->
-    <form class="pm-form" id="pm-form" data-endpoint="ENDPOINT" method="post" novalidate>
+    <form class="pm-form" id="pm-form" name="proefmeting" method="post" action="/contact.html?verzonden=1" data-netlify="true" netlify-honeypot="_gotcha" novalidate>
+      <input type="hidden" name="form-name" value="proefmeting">
       <div class="pm-veld">
         <label for="pm-start">Waar wil je mee beginnen?</label>
         <select id="pm-start" name="start">
@@ -244,6 +249,13 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
     if(naam){ naam.focus(); }
     if(history.replaceState) history.replaceState(null,'',location.pathname);
   }
+  var GELUKT_KOP='Aanvraag ontvangen',
+      GELUKT_TEKST='Je hoort binnen 2 werkdagen van een van ons, met de uitkomst van de proefmeting en de screenshots erbij. Komt er niets aan? Kijk even in je spam.';
+  // zonder JavaScript verwerkt Netlify het formulier zelf en stuurt terug naar ?verzonden=1
+  if(qs.get('verzonden')){
+    toon('gelukt',GELUKT_KOP,GELUKT_TEKST);
+    if(history.replaceState) history.replaceState(null,'',location.pathname);
+  }
   function toon(soort,kop,tekst){
     status.className='pm-status '+soort;
     status.innerHTML='<strong>'+kop+'</strong>'+tekst;
@@ -261,20 +273,14 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
       toon('mislukt','Er ontbreekt nog iets','Vul je naam, een werk-e-mailadres en je website in. De website hebben we nodig om de meting te kunnen draaien.');
       return;
     }
-    var endpoint=form.getAttribute('data-endpoint');
-    if(!endpoint||endpoint==='ENDPOINT'){
-      toon('mislukt','Dit formulier staat nog niet aan',
-        'De verzendkoppeling is nog niet ingesteld, dus je aanvraag komt op dit moment nergens aan. Dat zeggen we liever dan te doen alsof hij verstuurd is.');
-      return;
-    }
     var knop=form.querySelector('button[type=submit]'), oud=knop.textContent;
     knop.disabled=true; knop.textContent='Bezig met versturen…';
-    fetch(endpoint,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+    // Netlify Forms: POST naar het eigen pad, urlencoded, met form-name in de body
+    fetch(location.pathname,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()})
       .then(function(r){
         if(!r.ok) throw new Error(r.status);
         form.reset();
-        toon('gelukt','Aanvraag ontvangen',
-          'Je hoort binnen 2 werkdagen van een van ons, met de uitkomst van de proefmeting en de screenshots erbij. Komt er niets aan? Kijk even in je spam.');
+        toon('gelukt',GELUKT_KOP,GELUKT_TEKST);
       })
       .catch(function(){
         toon('mislukt','Versturen lukte niet',
