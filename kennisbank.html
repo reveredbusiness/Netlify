@@ -352,8 +352,17 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
   var knoppen=document.querySelectorAll('.kb-knop'), kaarten=document.querySelectorAll('.gids-kaart');
   if(!knoppen.length) return;
   var leeg=document.createElement('p');
-  leeg.className='kb-leeg'; leeg.hidden=true; leeg.textContent='Geen gidsen in deze categorie.';
+  leeg.className='kb-leeg'; leeg.hidden=true; leeg.setAttribute('role','status'); leeg.textContent='Geen gidsen in deze categorie.';
   document.querySelector('.gidsen').after(leeg);
+
+  // aantallen uit de kaarten zelf, zodat ze niet verouderen als er een gids bij komt
+  knoppen.forEach(function(k){
+    var f=k.getAttribute('data-filter'), n=0;
+    kaarten.forEach(function(c){ if(f==='alles' || c.getAttribute('data-tag')===f) n++; });
+    var b=document.createElement('span'); b.className='aantal'; b.textContent=n;
+    k.appendChild(b);
+  });
+
   knoppen.forEach(function(k){
     k.addEventListener('click',function(){
       var f=k.getAttribute('data-filter'), zichtbaar=0;

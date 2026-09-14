@@ -1,4 +1,4 @@
-/* REVERED · huisstijl v1.4 (12 aug 2026), kopletter: Source Serif 4
+/* REVERED · huisstijl v1.5 (14 sep 2026), kopletter: Source Serif 4
    Kleuren: olijfgroen #62654B (hoofd + CTA), beige #D6C8B2, crème #F8F2E6
    Regels: knoppen altijd solide groen/crème; grote groene vlakken spaarzaam;
    cijfers in IBM Plex Mono; geen gedachtestreepjes in copy.
@@ -10,6 +10,21 @@
      regels erop leesbaar zijn zonder de hiërarchie plat te slaan. De hoofdkleur
      #62654B blijft ongewijzigd voor knoppen, koppen en accenten.
    - Mobiele navigatie: links vouwen naar een tweede regel in plaats van te verdwijnen.
+
+   Wijzigingen v1.5 (14 sep 2026):
+   - Mono-regel aangescherpt en nageleefd. IBM Plex Mono stond op lopende tekst
+     (.bron, .pakket-noot, .vergelijk-hint) en op alle formulierlabels, waardoor het
+     feitelijk het hoofdlettertype was geworden. Die staan nu in Instrument Sans.
+     Mono blijft op wat het hoort te doen: cijfers, tabelkoppen, tags, kruimelpaden,
+     eyebrows en datums.
+   - Formulierlabels: geen kapitalen en geen letterafstand meer. Kapitalen breken in
+     het Nederlands de samenstellingen en maakten lange vraaglabels (intake.html)
+     slecht scanbaar.
+   - Nieuw token --rand-veld #8F8468 voor de randen van invoervelden. De oude
+     --beige rand haalde 1,65:1 op wit, terwijl WCAG 2.1 AA (1.4.11, non-text
+     contrast) 3:1 eist voor bedieningselementen. --rand-veld haalt 3,7:1 op wit en
+     3,32:1 op crème. --beige blijft de rand voor kaarten en scheidslijnen, die
+     vallen niet onder die eis.
 */
 
 :root{
@@ -21,8 +36,13 @@
   --inkt:#2f3122;
   --zacht:#6b6d57;
   --wit:#FFFFFF;
+  --rand-veld:#8F8468;
 }
 *{margin:0;padding:0;box-sizing:border-box}
+/* het hidden-attribuut komt uit de UA-stylesheet en verliest van elke eigen
+   display-regel (a.gids-kaart{display:block} won hem, waardoor het
+   kennisbankfilter niets deed). Daarom hier hard, voor alles. */
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
@@ -86,7 +106,7 @@ h3{font-family:'Source Serif 4',serif;font-weight:500;font-size:20px;color:var(-
 .mono{font-family:'IBM Plex Mono',monospace}
 .kicker{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--zacht)}
 .kicker-stil{color:var(--zacht)}
-.bron{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--zacht)}
+.bron{font-size:13.5px;line-height:1.6;color:var(--zacht)}
 .bron a{color:var(--groen)}
 .datum{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--zacht);margin-top:16px}
 
@@ -232,20 +252,22 @@ section{padding:72px 0}
 .faq .antwoord p:last-child{margin-bottom:0}
 
 /* formulier */
-.pm-form{max-width:440px;display:flex;flex-direction:column;gap:12px;text-align:left}
+.pm-form{max-width:440px;display:flex;flex-direction:column;gap:18px;text-align:left}
 .pm-form.centered{margin:0 auto}
-.pm-veld{display:flex;flex-direction:column;gap:5px}
-.pm-veld label{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.8px;text-transform:uppercase;color:var(--groen)}
+.pm-veld{display:flex;flex-direction:column;gap:6px}
+.pm-veld label{font-size:13.5px;font-weight:500;color:var(--groen-donker)}
 .pm-form input,.pm-form select,.pm-form textarea{
   font-family:'Instrument Sans',sans-serif;font-size:15.5px;color:var(--inkt);
-  background:var(--wit);border:1px solid var(--beige);border-radius:8px;
+  background:var(--wit);border:1px solid var(--rand-veld);border-radius:8px;
   padding:13px 16px;width:100%;
 }
 .pm-form input:focus,.pm-form select:focus,.pm-form textarea:focus{outline:2px solid var(--groen);outline-offset:1px;border-color:var(--groen)}
 .pm-form ::placeholder{color:#767860}
 .pm-form input:user-invalid{border-color:#a4553a}
 .pm-submit{width:100%;cursor:pointer;font-family:'Instrument Sans',sans-serif;margin-top:4px}
-.pm-avg{font-size:13.5px;color:var(--zacht);max-width:440px;margin-top:14px}
+/* geruststelling direct onder de knop, waar de twijfel zit */
+.pm-belofte{max-width:440px;margin-top:14px;font-size:14.5px;font-weight:500;color:var(--groen)}
+.pm-avg{font-size:13.5px;line-height:1.6;color:var(--zacht);max-width:440px;margin-top:8px}
 .pm-status{
   max-width:440px;margin-top:16px;padding:16px 18px;border-radius:10px;
   border:1px solid var(--beige);background:var(--wit);font-size:15.5px;color:#55573f;
@@ -338,7 +360,7 @@ section{padding:72px 0}
 .pakket li small{display:block;font-size:13.5px;color:var(--zacht);font-weight:400}
 .pakket .actie{margin-top:auto;padding-top:22px}
 .pakket .actie .btn{width:100%;text-align:center}
-.pakket-noot{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--zacht);margin-top:22px;max-width:70ch}
+.pakket-noot{font-size:13.5px;line-height:1.6;color:var(--zacht);margin-top:22px;max-width:70ch}
 
 /* catalogus */
 .catalogus{width:100%;border-collapse:collapse;margin-top:32px;background:var(--wit);border:1px solid var(--beige);border-radius:14px;overflow:hidden;font-size:15px}
@@ -364,7 +386,7 @@ section{padding:72px 0}
 .vergelijk tfoot td{font-family:'IBM Plex Mono',monospace;font-weight:500;color:var(--groen-donker);background:var(--creme);border-bottom:none}
 .vergelijk tfoot tr.besparing td{font-weight:400;color:var(--zacht);font-size:12.5px}
 .vergelijk-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
-.vergelijk-hint{display:none;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--zacht);margin-top:22px}
+.vergelijk-hint{display:none;font-size:13.5px;color:var(--zacht);margin-top:22px}
 
 @media (max-width:860px){
   .pakketten{grid-template-columns:1fr}
@@ -491,16 +513,21 @@ a.gids-kaart.uitgelicht{border-color:var(--groen)}
 .naar-boven:focus-visible{outline:3px solid var(--groen-donker);outline-offset:2px}
 
 /* ── kennisbank-filter ── */
-.kb-filter{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px}
-.kb-knop{
-  font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.8px;
-  text-transform:uppercase;color:var(--groen);background:transparent;
-  border:1px solid var(--beige);border-radius:999px;padding:7px 15px;cursor:pointer;
-  transition:background .15s ease,border-color .15s ease,color .15s ease;
+.kb-filter{
+  display:flex;flex-wrap:wrap;gap:12px 26px;
+  border-bottom:1px solid var(--beige);
 }
-.kb-knop:hover{border-color:var(--groen)}
-.kb-knop[aria-pressed="true"]{background:var(--groen);color:var(--creme);border-color:var(--groen)}
-.kb-knop:focus-visible{outline:3px solid var(--groen);outline-offset:2px}
+.kb-knop{
+  font-family:inherit;font-size:15px;color:var(--zacht);background:transparent;
+  border:0;border-bottom:2px solid transparent;margin-bottom:-1px;
+  padding:0 0 10px;cursor:pointer;display:flex;align-items:baseline;gap:7px;
+  transition:color .15s ease,border-color .15s ease;
+}
+.kb-knop:hover{color:var(--groen-donker)}
+.kb-knop .aantal{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--zacht)}
+.kb-knop[aria-pressed="true"]{color:var(--groen-donker);font-weight:500;border-bottom-color:var(--groen)}
+.kb-knop[aria-pressed="true"] .aantal{color:var(--groen)}
+.kb-knop:focus-visible{outline:3px solid var(--groen);outline-offset:4px;border-radius:3px}
 .kb-leeg{margin-top:28px;color:var(--zacht)}
 
 /* ── eerste stap uitlichten ── */
@@ -515,7 +542,7 @@ a.gids-kaart.uitgelicht{border-color:var(--groen)}
 .hero-start{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px;max-width:500px}
 .hero-start input{
   flex:1 1 180px;min-width:0;font-family:'Instrument Sans',sans-serif;font-size:15.5px;color:var(--inkt);
-  background:var(--wit);border:1px solid var(--beige);border-radius:8px;padding:13px 16px;
+  background:var(--wit);border:1px solid var(--rand-veld);border-radius:8px;padding:13px 16px;
 }
 .hero-start .btn{padding:13px 20px;white-space:nowrap}
 .hero-start input:focus{outline:2px solid var(--groen);outline-offset:1px;border-color:var(--groen)}

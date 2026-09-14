@@ -23,16 +23,18 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <style>
 /* ── aanvullingen intake ── */
-.intake-sectie{margin-top:44px}
+/* de velden zijn kind van .intake-sectie, niet van .pm-form, dus de gap van het
+   formulier raakte ze niet en stonden ze zonder tussenruimte op elkaar */
+.intake-sectie{margin-top:44px;display:flex;flex-direction:column;gap:18px}
 .intake-sectie:first-of-type{margin-top:36px}
 .intake-kop{
   font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:1.4px;
   text-transform:uppercase;color:var(--groen);border-bottom:1px solid var(--beige);
-  padding-bottom:10px;margin-bottom:20px;display:flex;justify-content:space-between;gap:12px;
+  padding-bottom:10px;margin-bottom:2px;display:flex;justify-content:space-between;gap:12px;
 }
 .intake-kop .stapnr{color:var(--zacht)}
 .pm-form.intake{max-width:560px}
-.pm-veld .hint{font-size:13px;color:var(--zacht);margin-top:2px}
+.pm-veld .hint{font-size:13.5px;line-height:1.6;color:var(--zacht);margin-top:2px}
 .veilig{
   background:var(--wit);border:1px solid var(--beige);border-left:3px solid var(--groen);
   border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 20px;max-width:560px;
