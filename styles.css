@@ -26,7 +26,7 @@
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
-  .pijler:hover,.lid:hover,a.gids-kaart:hover{transform:none}
+  .pijler:hover,.lid:hover,a.gids-kaart:hover,.stap:hover,.pakket:hover,.cijfer:hover{transform:none}
 }
 body{
   font-family:'Instrument Sans',sans-serif;
@@ -142,6 +142,11 @@ section{padding:72px 0}
 .stap{
   background:var(--wit);border:1px solid var(--beige);border-radius:14px;padding:26px;
   display:flex;flex-direction:column;
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+}
+.stap:hover{
+  transform:translateY(-4px);border-color:var(--groen);
+  box-shadow:0 12px 26px -14px rgba(98,101,75,.4);
 }
 .stap .mono{font-size:13px;color:var(--groen);margin-bottom:10px}
 .stap h2,.stap h3{font-size:20px;line-height:1.25;max-width:none;margin-bottom:8px}
@@ -161,12 +166,28 @@ section{padding:72px 0}
 .verdediging p{font-size:16.5px;color:#55573f;max-width:62ch}
 .verdediging strong{color:var(--groen-donker)}
 
-.eerlijk-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.eerlijk-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 .belofte{border-left:3px solid var(--groen);padding-left:22px;margin-top:26px}
 .belofte p{font-size:16.5px;color:#55573f;margin-bottom:14px}
+.belofte p:last-child{margin-bottom:0}
 .belofte p strong{color:var(--groen-donker)}
-.quote{font-family:'Source Serif 4',serif;font-style:italic;font-size:23px;line-height:1.4;color:var(--groen);max-width:26ch}
-.quote-src{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--zacht);margin-top:16px}
+/* Het citaat kreeg als losse regel naast een veel langere tekstkolom geen gewicht:
+   het hing bovenin en liet de halve kolom leeg. Als crème paneel op het witte vlak
+   heeft het een eigen vorm en wegen de twee kolommen tegen elkaar op. */
+.quote-kaart{
+  background:var(--creme);border:1px solid var(--beige);border-radius:12px;
+  padding:30px 34px 28px;
+}
+.quote-kaart::before{
+  content:"\201C";display:block;
+  font-family:'Source Serif 4',serif;font-size:52px;line-height:.5;
+  color:var(--beige);margin-bottom:4px;
+}
+.quote{font-family:'Source Serif 4',serif;font-style:italic;font-size:22px;line-height:1.42;color:var(--groen);max-width:24ch}
+.quote-src{
+  font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--zacht);
+  margin-top:18px;padding-top:16px;border-top:1px solid var(--beige);
+}
 
 /* faq */
 .faq{max-width:760px;margin-top:36px}
@@ -237,7 +258,14 @@ section{padding:72px 0}
 
 /* onderzoek: cijferblokken en databalken */
 .cijfers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
-.cijfer{background:var(--wit);border:1px solid var(--beige);border-radius:14px;padding:24px}
+.cijfer{
+  background:var(--wit);border:1px solid var(--beige);border-radius:14px;padding:24px;
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+}
+.cijfer:hover{
+  transform:translateY(-4px);border-color:var(--groen);
+  box-shadow:0 12px 26px -14px rgba(98,101,75,.4);
+}
 .cijfer .getal{font-family:'IBM Plex Mono',monospace;font-size:34px;font-weight:500;color:var(--groen-donker);line-height:1;letter-spacing:-1px}
 .cijfer p{font-size:14.5px;color:#55573f;margin-top:10px}
 .data-tabel{width:100%;border-collapse:collapse;margin:24px 0 8px;background:var(--wit);border:1px solid var(--beige);border-radius:14px;overflow:hidden;font-size:15px}
@@ -253,7 +281,10 @@ section{padding:72px 0}
   display:flex;flex-direction:column;position:relative;
   transition:border-color .18s ease,transform .18s ease,box-shadow .18s ease;
 }
-.pakket:hover{border-color:var(--groen);transform:translateY(-2px);box-shadow:0 8px 24px rgba(47,49,34,.06)}
+.pakket:hover{
+  transform:translateY(-4px);border-color:var(--groen);
+  box-shadow:0 12px 26px -14px rgba(98,101,75,.4);
+}
 .pakket.volledig{border-color:var(--groen)}
 .pakket .merk{
   position:absolute;top:-11px;left:24px;background:var(--groen);color:var(--creme);
@@ -501,7 +532,9 @@ a.gids-kaart.uitgelicht{border-color:var(--groen)}
   .inhoud{padding:18px 20px}
   .hero-grid{grid-template-columns:1fr;gap:52px}
   .pijlers,.stappen,.eerlijk-grid,.team,.gidsen,.cijfers{grid-template-columns:1fr}
-  .eerlijk-grid{gap:36px}
+  .eerlijk-grid{gap:32px}
+  .quote-kaart{padding:24px 26px 22px}
+  .quote{font-size:20px;max-width:32ch}
   section{padding:56px 0}
   .methode-tabel th{width:auto;display:block;border-bottom:none;padding-bottom:4px}
   .methode-tabel td{display:block;padding-top:0}
