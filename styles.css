@@ -123,6 +123,29 @@ section{padding:72px 0}
 .log-modellen{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;line-height:1.6;color:rgba(248,242,230,.62)}
 .log-modellen a{color:rgba(248,242,230,.62)}
 
+/* Groepskoppen binnen een log: de maanden bevatten nu zowel uitvoering als meting,
+   en zonder label loopt dat als één rij regels door elkaar. */
+.log-groep{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.4px;
+  text-transform:uppercase;color:rgba(248,242,230,.66);margin-top:22px;
+}
+.log-metric + .log-label + .log-groep{margin-top:18px}
+
+/* citatie-log: leeswijzer en maandreeks */
+.uitleg{list-style:none;margin-top:34px;display:grid;gap:26px}
+.uitleg li{border-left:3px solid var(--beige);padding-left:22px}
+.uitleg .u-num{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--groen);display:block;margin-bottom:6px}
+.uitleg h3{font-size:19px;margin-bottom:6px}
+.uitleg p{font-size:16px;color:#55573f;max-width:62ch}
+.log-reeks{max-width:560px;margin-top:34px;display:grid;gap:46px}
+.maand-label{
+  font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:1.2px;
+  text-transform:uppercase;color:var(--groen);margin-bottom:8px;
+}
+.maand-label .mnr{color:var(--groen-donker);font-weight:500}
+.maand-intro{font-size:15.5px;color:#55573f;margin-bottom:18px}
+.log-reeks .log-foot{margin-top:18px}
+
 /* kaarten & grids */
 .pijlers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
 .pijler{
@@ -258,6 +281,9 @@ section{padding:72px 0}
 
 /* onderzoek: cijferblokken en databalken */
 .cijfers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+/* Zes tegels met langere toelichting passen in de smalle kolom beter twee naast
+   elkaar; staat hier zodat de mobiele .cijfers-regel er verderop overheen gaat. */
+.cijfers-twee{grid-template-columns:repeat(2,1fr)}
 .cijfer{
   background:var(--wit);border:1px solid var(--beige);border-radius:14px;padding:24px;
   transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
@@ -534,6 +560,8 @@ a.gids-kaart.uitgelicht{border-color:var(--groen)}
   .pijlers,.stappen,.eerlijk-grid,.team,.gidsen,.cijfers{grid-template-columns:1fr}
   .eerlijk-grid{gap:32px}
   .quote-kaart{padding:24px 26px 22px}
+  .log-reeks{gap:38px}
+  .log-card{padding:24px 22px 20px}
   .quote{font-size:20px;max-width:32ch}
   section{padding:56px 0}
   .methode-tabel th{width:auto;display:block;border-bottom:none;padding-bottom:4px}
