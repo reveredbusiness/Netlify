@@ -34,8 +34,9 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
 <meta name="twitter:image" content="https://revered.nl/og-revered.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script src="nav.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -59,6 +60,7 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
           "name": "Djitza"
         }
       ],
+      "email": "reveredbusiness@gmail.com",
       "areaServed": "NL",
       "knowsAbout": [
         "Search Engine Optimization (SEO)",
@@ -195,14 +197,19 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
       <img class="logo-vol" src="logo-revered-horizontaal.svg" alt="" width="170" height="30">
       <img class="logo-merk" src="logo-revered-monogram.svg" alt="" width="37" height="30">
     </a>
-    <div class="nav-links">
-      <a href="citatie-log.html">De citatie-log</a>
-      <a href="werkwijze-prijzen.html" aria-current="page">Diensten &amp; prijzen</a>
-      <a href="meetmethode.html">Meetmethode</a>
-      <a href="kennisbank.html">Kennisbank</a>
-      <a href="over-revered.html">Over Revered</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hoofdmenu" aria-label="Menu">
+      <span class="nav-toggle-streep"></span>
+    </button>
+    <div class="nav-menu" id="hoofdmenu">
+      <div class="nav-links">
+        <a href="citatie-log.html">De citatie-log</a>
+        <a href="werkwijze-prijzen.html" aria-current="page">Diensten &amp; prijzen</a>
+        <a href="meetmethode.html">Meetmethode</a>
+        <a href="kennisbank.html">Kennisbank</a>
+        <a href="over-revered.html">Over Revered</a>
+      </div>
+      <a class="btn nav-cta" href="contact.html">Gratis proefmeting</a>
     </div>
-    <a class="btn nav-cta" href="contact.html">Gratis proefmeting</a>
   </div>
 </nav>
 
@@ -305,6 +312,7 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
   <div class="wrap foot-inner">
     <div>
       <span>&copy; 2026 Revered &middot; SEO + AI-zichtbaarheid</span>
+      <span class="foot-mail"><a href="mailto:reveredbusiness@gmail.com">reveredbusiness@gmail.com</a></span>
     </div>
     <div class="foot-links">
       <a href="citatie-log.html">Citatie-log</a>

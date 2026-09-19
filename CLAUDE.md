@@ -17,4 +17,6 @@ Na de push is de site binnen ±1 minuut bijgewerkt. Commit als Revered <reveredb
 - Nieuwe indexeerbare pagina: ook toevoegen aan sitemap.xml (en kennisbank.html als het een gids is).
 - Huisstijl en inhoudsregels: zie README.md. Prijzen staan op één plek als bron (merk/REVERED-diensten-en-prijzen.md, buiten deze repo).
 - Doe geen `git push --force`.
+- Navigatie en menuknop staan op elke pagina met een menu identiek in de HTML; `nav.js` hoort in de `<head>` zonder `defer`. Wijzig je het menu, wijzig het op alle pagina's tegelijk (zie README, "Regels die in de code verwerkt zitten").
+- Geen `<option value="">` in formulieren: een leeg veld komt als lege regel in de notificatiemail, waardoor 'standaardoptie gekozen' en 'niet ingevuld' niet te onderscheiden zijn. Geef elke optie een echte waarde.
 - Formulieren (contact.html = `proefmeting`, intake.html = `intake`) lopen via Netlify Forms: `name`, `data-netlify="true"`, het verborgen veld `form-name` en de honeypot `_gotcha` laten staan; het script post urlencoded naar het eigen pad. Nieuw formulier: dezelfde vier onderdelen met een unieke `name`. Form detection en e-mailnotificaties staan in het Netlify-dashboard (README, punt 4).

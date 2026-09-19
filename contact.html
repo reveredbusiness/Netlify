@@ -34,8 +34,9 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
 <meta name="twitter:image" content="https://revered.nl/og-revered.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script src="nav.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -59,6 +60,7 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
           "name": "Djitza"
         }
       ],
+      "email": "reveredbusiness@gmail.com",
       "areaServed": "NL",
       "knowsAbout": [
         "Search Engine Optimization (SEO)",
@@ -114,14 +116,19 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
       <img class="logo-vol" src="logo-revered-horizontaal.svg" alt="" width="170" height="30">
       <img class="logo-merk" src="logo-revered-monogram.svg" alt="" width="37" height="30">
     </a>
-    <div class="nav-links">
-      <a href="citatie-log.html">De citatie-log</a>
-      <a href="werkwijze-prijzen.html">Diensten &amp; prijzen</a>
-      <a href="meetmethode.html">Meetmethode</a>
-      <a href="kennisbank.html">Kennisbank</a>
-      <a href="over-revered.html">Over Revered</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hoofdmenu" aria-label="Menu">
+      <span class="nav-toggle-streep"></span>
+    </button>
+    <div class="nav-menu" id="hoofdmenu">
+      <div class="nav-links">
+        <a href="citatie-log.html">De citatie-log</a>
+        <a href="werkwijze-prijzen.html">Diensten &amp; prijzen</a>
+        <a href="meetmethode.html">Meetmethode</a>
+        <a href="kennisbank.html">Kennisbank</a>
+        <a href="over-revered.html">Over Revered</a>
+      </div>
+      <a class="btn nav-cta" href="contact.html" aria-current="page">Gratis proefmeting</a>
     </div>
-    <a class="btn nav-cta" href="contact.html" aria-current="page">Gratis proefmeting</a>
   </div>
 </nav>
 
@@ -129,15 +136,15 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
   <div class="wrap-smal kruimels-inner"><a href="index.html">Home</a> <span class="scheiding">/</span> <span aria-current="page">Contact</span></div>
 </nav>
 
-<header class="hero">
+<header class="hero hero-formulier">
   <div class="wrap-smal">
     <p class="eyebrow">Contact</p>
     <h1>Vraag de gratis <em>proefmeting</em> aan</h1>
-    <p class="sub" style="max-width:56ch">10 vragen uit jouw markt, door 3 AI-modellen, mét screenshots van de antwoorden. Handwerk. Daarom duurt het twee werkdagen en is het ook echt raak.</p>
+    <p class="sub" style="max-width:56ch">10 vragen uit jouw markt, door 3 AI-modellen, mét screenshots van de antwoorden. We draaien ze met de hand, daarom duurt het twee werkdagen.</p>
   </div>
 </header>
 
-<section class="wit">
+<section class="wit sectie-formulier">
   <div class="wrap-smal">
     <!-- ===================================================================
          FORMULIER-HANDLER: Netlify Forms (de host van deze site).
@@ -154,67 +161,75 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
          Verwijder nooit het verborgen veld form-name: zonder dat veld weet
          Netlify niet bij welk formulier een inzending hoort.
          =================================================================== -->
-    <form class="pm-form" id="pm-form" name="proefmeting" method="post" action="/contact.html?verzonden=1" data-netlify="true" netlify-honeypot="_gotcha" novalidate>
-      <input type="hidden" name="form-name" value="proefmeting">
-      <div class="pm-veld">
-        <label for="pm-start">Waar wil je mee beginnen?</label>
-        <select id="pm-start" name="start">
-          <option>De gratis proefmeting</option>
-          <option>Eerst een kennismaking van 20 minuten</option>
-        </select>
-        <p class="bron" style="margin-top:8px">De proefmeting is 10 vragen door 3 AI-modellen, met de screenshots erbij. Je hebt hem binnen 2 werkdagen.</p>
-      </div>
-      <div class="pm-veld">
-        <label for="pm-naam">Naam</label>
-        <input id="pm-naam" type="text" name="naam" required autocomplete="name" placeholder="Voor- en achternaam">
-      </div>
-      <div class="pm-veld">
-        <label for="pm-email">Werk-e-mail</label>
-        <input id="pm-email" type="email" name="email" required autocomplete="email" placeholder="jij@bedrijf.nl">
-      </div>
-      <div class="pm-veld">
-        <label for="pm-website">Website</label>
-        <input id="pm-website" type="url" name="website" required autocomplete="url" placeholder="https://bedrijf.nl">
-      </div>
-      <div class="pm-veld">
-        <label for="pm-pakket">Waar denk je aan? (optioneel)</label>
-        <select id="pm-pakket" name="pakket">
-          <option value="">Weet ik nog niet, eerst zien waar we staan</option>
-          <option value="groei">Pakket Groei (€499 per maand)</option>
-          <option value="autoriteit">Pakket Autoriteit (€899 per maand)</option>
-          <option value="marktleider">Pakket Marktleider (€1.499 per maand)</option>
-          <option value="los">Een of meer losse diensten uit de catalogus</option>
-        </select>
-        <p class="bron" style="margin-top:8px">Alle pakketten en losse prijzen staan op <a href="werkwijze-prijzen.html">diensten &amp; prijzen</a>.</p>
-      </div>
-      <div class="pm-veld">
-        <label for="pm-herkomst">Hoe kwam je bij ons terecht? (optioneel)</label>
-        <select id="pm-herkomst" name="herkomst">
-          <option value="">Liever niet zeggen, of weet ik niet meer</option>
-          <option value="chatgpt">ChatGPT</option>
-          <option value="perplexity">Perplexity</option>
-          <option value="claude">Claude</option>
-          <option value="gemini-ai-overviews">Gemini of Google AI Overviews</option>
-          <option value="copilot">Copilot</option>
-          <option value="google">Google, gewone zoekresultaten</option>
-          <option value="linkedin">LinkedIn</option>
-          <option value="aanbeveling">Aanbeveling van iemand</option>
-          <option value="anders">Anders</option>
-        </select>
-        <p class="bron" style="margin-top:8px">We vragen dit omdat verwijzingen vanuit AI-assistenten in statistieken vrijwel onzichtbaar zijn. Jouw antwoord is de eerlijkste meting die er is.</p>
-      </div>
-      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px">
-      <button type="submit" class="btn pm-submit">Vraag de proefmeting aan</button>
-    </form>
-    <p class="pm-status" id="pm-status" hidden role="status" aria-live="polite"></p>
-    <p class="pm-belofte">Binnen 2 werkdagen antwoord van een founder.</p>
-    <p class="pm-avg">Je gegevens gebruiken we alleen om de proefmeting uit te voeren en je het resultaat te sturen. Geen mailinglijst, geen doorverkoop, geen belscript. Wil je dat we ze daarna wissen, dan vraag je dat en doen we dat.</p>
-    <!-- Zodra e-mailadres en telefoonnummer bestaan, hier terugzetten. Dit blok toont
-         bewust niets zolang er niets werkends te tonen is:
-         <div class="contactpad">
-           <span>Liever direct mailen? <a href="mailto:ADRES">ADRES</a></span>
-           <span>Of bel: <a href="tel:+31NUMMER">NUMMER</a></span>
-         </div> -->
+    <div class="pm-kaart">
+      <form class="pm-form" id="pm-form" name="proefmeting" method="post" action="/contact.html?verzonden=1" data-netlify="true" netlify-honeypot="_gotcha" novalidate>
+        <input type="hidden" name="form-name" value="proefmeting">
+        <div class="pm-veld">
+          <label for="pm-start">Waar wil je mee beginnen?</label>
+          <select id="pm-start" name="start">
+            <option>De gratis proefmeting</option>
+            <option>Eerst een kennismaking van 20 minuten</option>
+          </select>
+        </div>
+        <div class="pm-veld">
+          <label for="pm-naam">Naam</label>
+          <input id="pm-naam" type="text" name="naam" required autocomplete="name" placeholder="Voor- en achternaam">
+        </div>
+        <div class="pm-veld">
+          <label for="pm-email">Werk-e-mail</label>
+          <input id="pm-email" type="email" name="email" required autocomplete="email" placeholder="jij@bedrijf.nl">
+        </div>
+        <div class="pm-veld">
+          <label for="pm-website">Website</label>
+          <input id="pm-website" type="url" name="website" required autocomplete="url" placeholder="https://bedrijf.nl">
+          <p class="bron" style="margin-top:8px">Hierop draaien we de meting. Zonder site valt er niets te vergelijken.</p>
+        </div>
+        <div class="pm-veld">
+          <label for="pm-pakket">Heb je al een pakket op het oog? (optioneel)</label>
+          <select id="pm-pakket" name="pakket">
+            <option data-pakket="nog-geen-idee">Weet ik nog niet, eerst zien waar we staan</option>
+            <option data-pakket="groei">Pakket Groei (€499 per maand)</option>
+            <option data-pakket="autoriteit">Pakket Autoriteit (€899 per maand)</option>
+            <option data-pakket="marktleider">Pakket Marktleider (€1.499 per maand)</option>
+            <option data-pakket="losse-diensten">Een of meer losse diensten uit de catalogus</option>
+          </select>
+          <p class="bron" style="margin-top:8px">Dit verandert niets aan de proefmeting en je zit nergens aan vast. Alle prijzen staan open op <a href="werkwijze-prijzen.html">diensten &amp; prijzen</a>.</p>
+        </div>
+        <div class="pm-veld">
+          <label for="pm-herkomst">Hoe kwam je bij ons terecht? (optioneel)</label>
+          <select id="pm-herkomst" name="herkomst">
+            <option>Liever niet zeggen, of weet ik niet meer</option>
+            <option>ChatGPT</option>
+            <option>Perplexity</option>
+            <option>Claude</option>
+            <option>Gemini of Google AI Overviews</option>
+            <option>Copilot</option>
+            <option>Google, gewone zoekresultaten</option>
+            <option>LinkedIn</option>
+            <option>Aanbeveling van iemand</option>
+            <option>Anders</option>
+          </select>
+          <p class="bron" style="margin-top:8px">We vragen dit omdat verwijzingen vanuit AI-assistenten in statistieken vrijwel onzichtbaar zijn. Jouw antwoord is de eerlijkste meting die er is.</p>
+        </div>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px">
+        <button type="submit" class="btn pm-submit">Vraag de proefmeting aan</button>
+      </form>
+      <p class="pm-status" id="pm-status" hidden role="status" aria-live="polite"></p>
+      <p class="pm-belofte">Binnen 2 werkdagen antwoord van Yaiden of Djitza.</p>
+    </div>
+
+    <ul class="pm-zeker">
+      <li><strong>Een van ons tweeën mailt terug</strong>Geen accountmanager, geen belscript. Yaiden of Djitza heeft je meting zelf gedraaid en legt uit wat eruit kwam.</li>
+      <li><strong>De screenshots zitten erbij</strong>Je leest de antwoorden van alle drie de modellen na zoals ze eruit kwamen, ook de vragen waar je niet in voorkomt.</li>
+      <li><strong>Eén meetmoment, en dat zeggen we erbij</strong>De proefmeting is een momentopname, geen maandmeting. Waar hij weinig zegt, schrijven we dat erbij.</li>
+    </ul>
+    <p class="pm-avg">Je gegevens gebruiken we alleen om de proefmeting uit te voeren en je het resultaat te sturen. Geen mailinglijst, geen doorverkoop, geen belscript. Wil je dat we ze daarna wissen, dan vraag je dat en doen we dat. Meer staat in de <a href="privacy.html">privacyverklaring</a>.</p>
+    <!-- Telefoonnummer staat er bewust nog niet bij: liever geen nummer dan een
+         nummer waar niemand opneemt. Terugzetten zodra er een werkend nummer is:
+         <span>Of bel: <a href="tel:+31NUMMER">NUMMER</a></span> -->
+    <div class="contactpad">
+      <span>Liever eerst iets vragen? Mail <a href="mailto:reveredbusiness@gmail.com">reveredbusiness@gmail.com</a>, daar leest dezelfde persoon mee.</span>
+    </div>
   </div>
 </section>
 
@@ -237,7 +252,7 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
   var pk=qs.get('pakket');
   if(pk){
     var sel=document.getElementById('pm-pakket');
-    if(sel){ for(var i=0;i<sel.options.length;i++){ if(sel.options[i].value===pk){ sel.selectedIndex=i; break; } } }
+    if(sel){ for(var i=0;i<sel.options.length;i++){ if(sel.options[i].getAttribute('data-pakket')===pk){ sel.selectedIndex=i; break; } } }
     if(history.replaceState) history.replaceState(null,'',location.pathname+(qs.get('website')?'?website='+encodeURIComponent(qs.get('website')):''));
   }
   var uit=qs.get('website');
@@ -296,6 +311,7 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
   <div class="wrap foot-inner">
     <div>
       <span>© 2026 Revered · SEO + AI-zichtbaarheid</span>
+      <span class="foot-mail"><a href="mailto:reveredbusiness@gmail.com">reveredbusiness@gmail.com</a></span>
     </div>
     <div class="foot-links">
       <a href="citatie-log.html">Citatie-log</a>
