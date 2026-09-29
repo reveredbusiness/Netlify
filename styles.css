@@ -888,6 +888,26 @@ a.gids-kaart:hover .kb-tegel{--tegel-vlak:var(--wit);--tegel-rand:var(--groen)}
 }
 .log-card{position:relative;z-index:1}
 
+/* ── fotografie ──
+   Bandbeeld in de leeskolom: altijd 1400x540, altijd gecentreerd, nooit breder dan
+   860px. De foto's zijn vooraf op kleur gezet (zie afbeeldingen/LEESMIJ.md);
+   er staat bewust geen CSS-filter overheen, want dat kost rendertijd op elke
+   scroll en geeft op de telefoon zichtbare banding. */
+.figuur-band{max-width:860px;margin:32px auto 38px}
+.figuur-band .beeld{aspect-ratio:1400/540;object-fit:cover}
+/* in een slot is de foto het eerste element; daar zorgt de sectiepadding al voor lucht */
+.slot .figuur-band{margin:0 auto 34px}
+
+/* "Geen garanties. Wel bewijs." opent sinds 29 sep met de foto, net als de andere
+   drie pagina's met een foto. Met de standaard 72px liep dat crèmeblok te krap af;
+   iets meer lucht geeft de band ruimte zonder het paginaritme te breken.
+   Op de telefoon blijft het dichter bij de gewone sectiemaat, anders wordt het
+   scrollen naar de volgende sectie te lang. */
+#aanpak{padding-top:84px;padding-bottom:96px}
+@media (max-width:860px){
+  #aanpak{padding-top:66px;padding-bottom:66px}
+}
+
 /* ── echte foto's en schermbeelden (zie afbeeldingen/LEESMIJ.md) ── */
 .beeld{
   display:block;width:100%;height:auto;border-radius:12px;

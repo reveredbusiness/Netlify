@@ -9,8 +9,13 @@ De logo's staan bewust in de root, niet hier: ze horen bij de technische laag
 (favicon, JSON-LD, deelkaart) en hun paden staan op elke pagina.
 
 ## Regels
-- **Geen stock.** Blueprint §8: geen handenschuddende mensen. Eigen foto's of
-  niets. Een stockfoto ondermijnt precies datgene wat de site verkoopt.
+- **Stock is toegestaan sinds 29 sep 2026**, op uitdrukkelijk verzoek en tegen
+  blueprint §8 in. Twee grenzen blijven staan, en die zijn niet cosmetisch:
+  een stockfoto staat nooit op een plek waar hij als Revered zelf gelezen kan
+  worden (niet bij de founders, niet als "ons kantoor", niet als klant), en de
+  alt-tekst beschrijft alleen wat er te zien is, zonder claim over wie het is.
+  Daarom staat er bewust géén foto op `over-revered.html`: daar zou een
+  onbekende op de foto gelezen worden als Yaiden of Djitza.
 - **Formaat:** WebP, kwaliteit ~80. Bewaar het origineel buiten deze repo.
 - **Breedte:** twee keer de maat waarop het getoond wordt (retina), niet meer.
   Portret 104px op de site, dus 208px breed opslaan.
@@ -21,6 +26,37 @@ De logo's staan bewust in de root, niet hier: ze horen bij de technische laag
   `founder-yaiden.webp`, niet `IMG_4821.webp`.
 - **Alt-tekst:** beschrijf wat er staat. Bij een portret de naam. Puur
   decoratief beeld krijgt `alt=""`, maar dat hebben we hier niet.
+
+## De vier foto's die er nu staan
+
+| Bestand | Pagina | Bron (Pexels) |
+| --- | --- | --- |
+| `foto-gesprek.webp` | `index.html`, bij "De eerlijke meetlat" | [6893885](https://www.pexels.com/photo/6893885/) |
+| `foto-werk.webp` | `meetmethode.html`, boven "Vijf vaste onderdelen" | [9222424](https://www.pexels.com/photo/9222424/) |
+| `foto-notities.webp` | `citatie-log.html`, bij "Hoe je het leest" | [204511](https://www.pexels.com/photo/204511/) |
+| `foto-bureau.webp` | `contact.html`, boven "Wat er daarna gebeurt" | [8850629](https://www.pexels.com/photo/8850629/) |
+
+Licentie: Pexels-licentie, vrij voor commercieel gebruik zonder naamsvermelding.
+Bewaar deze tabel, want zonder herkomst kun je later niet aantonen dat het mag.
+
+### De kleurbehandeling
+Rauwe stock botst met crème en olijf: blauwe overhemden, gekleurde schermen,
+koele ramen. Alle vier zijn daarom door dezelfde grading gehaald, zodat ze als
+één set lezen in plaats van als vier losse plaatjes. Bak de behandeling in het
+bestand, niet in CSS: een `filter` op een grote foto kost rendertijd bij elke
+scroll en geeft op de telefoon zichtbare banding.
+
+```
+ffmpeg -i bron.jpg -vf "scale=1400:540:force_original_aspect_ratio=increase,\
+crop=1400:540,hue=s=0.50,\
+colorbalance=rs=.06:gs=.02:bs=-.06:rm=.04:bm=-.05:rh=.05:gh=.03:bh=-.06,\
+eq=contrast=0.97:brightness=0.02" uit.png
+cwebp -q 78 uit.png -o afbeeldingen/foto-naam.webp
+```
+
+`hue=s` is de enige knop die per foto verschilt: 0.38 tot 0.50, lager naarmate
+er meer storende kleur in zit. Resultaat: 26 tot 38 KB per foto op 1400x540.
+Bandformaat is altijd 1400x540 (`.figuur-band`, weergegeven op maximaal 860px).
 
 ## De twee soorten die nog ontbreken
 

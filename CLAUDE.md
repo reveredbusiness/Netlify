@@ -16,7 +16,8 @@ Na de push is de site binnen ±1 minuut bijgewerkt. Commit als Revered <reveredb
 - Elke HTML-pagina heeft in `<head>` de GA4-snippet (G-Z3MCDM39H8, consent mode) en vlak voor `</body>` de cookiebanner. Nieuwe pagina: kopieer beide uit een bestaande pagina.
 - Nieuwe indexeerbare pagina: ook toevoegen aan sitemap.xml (en kennisbank.html als het een gids is).
 - Huisstijl en inhoudsregels: zie README.md. Prijzen staan op één plek als bron (merk/REVERED-diensten-en-prijzen.md, buiten deze repo).
-- Beeld: diagrammen en iconen zijn HTML + inline SVG in de pagina (blok `BEELD` onderaan `styles.css`), nooit losse .svg/.png. Alleen echte foto's en schermbeelden zijn bestanden en staan in `afbeeldingen/`; zie `afbeeldingen/LEESMIJ.md` voor formaat, alt-tekst en de klaarstaande HTML. Geen stockfoto's, ooit.
+- Beeld: diagrammen en iconen zijn HTML + inline SVG in de pagina (blok `BEELD` onderaan `styles.css`), nooit losse .svg/.png. Foto's zijn wel bestanden en staan in `afbeeldingen/`; zie `afbeeldingen/LEESMIJ.md` voor formaat, alt-tekst, de kleurbehandeling en de herkomst van elke foto.
+- Stockfoto's staan sinds 29 sep 2026 op de site, tegen blueprint §8 in, op uitdrukkelijk verzoek. Twee regels blijven wél gelden: een stockfoto mag nooit op een plek staan waar hij als Revered zelf gelezen kan worden (dus niet bij de founders, niet als kantoor, niet als klant), en de alt-tekst beschrijft alleen wat er te zien is, zonder claim over wie het is.
 - Doe geen `git push --force`.
 - Navigatie en menuknop staan op elke pagina met een menu identiek in de HTML; `nav.js` hoort in de `<head>` zonder `defer`. Wijzig je het menu, wijzig het op alle pagina's tegelijk (zie README, "Regels die in de code verwerkt zitten").
 - Geen `<option value="">` in formulieren: een leeg veld komt als lege regel in de notificatiemail, waardoor 'standaardoptie gekozen' en 'niet ingevuld' niet te onderscheiden zijn. Geef elke optie een echte waarde.
