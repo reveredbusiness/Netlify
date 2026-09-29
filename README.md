@@ -20,7 +20,8 @@ Volledige site in huisstijl v1.6 (kopletter Source Serif 4, tekstletter Inter, 1
 - `gids-wat-kost-geo.html`, `gids-geo-bureau-kiezen.html`, `gids-zelf-meten-ai-zichtbaarheid.html`: bottom-funnel-gidsen voor het cluster "een GEO-bureau kiezen" (playbook-run 25 aug; prijzen en marktcijfers met bron en peildatum, geen aanbieders bij naam)
 - `ai-info.html`: puur feitelijk feitenblad (C3; géén promotietaal en géén claim dat de pagina iets 'doet', dat is een rode lijn)
 - `intake.html`: intakeformulier voor nieuwe klanten (noindex, geen canonical, niet in sitemap); hoort bij `../onboarding/`, staat hier omdat het `styles.css` en de logo's gebruikt
-- `styles.css`: gedeelde huisstijl
+- `styles.css`: gedeelde huisstijl. Het blok `BEELD` onderaan bevat alles wat sinds 29 sep 2026 voor beeld is toegevoegd: `.figuur` (omlijsting met onderschrift), `.antwoord` (nagemaakt AI-antwoord), `.telling`, `.klokken`, `.routes`, `.systeem`, de kennisbanktegels en de maanvorm
+- `afbeeldingen/`: map voor echte foto's en schermbeelden (nu nog leeg op de LEESMIJ na). Diagrammen horen hier niet: die staan als HTML en inline SVG in de pagina zelf. Regels, formaten en de kant-en-klare HTML voor de founderportretten en voor echte AI-schermbeelden staan in `afbeeldingen/LEESMIJ.md`
 - `nav.js`: de menuknop voor smalle schermen, gedeeld door alle pagina's met een menu. Staat bewust in de `<head>` zónder `defer`: het zet meteen `.js-nav` op `<html>` en pas met die klasse klapt het menu in, zodat je op de telefoon niet eerst het hele menu ziet staan en het daarna wegklapt. Zonder JavaScript blijft het menu uitgeklapt en zijn alle links bereikbaar.
 - `logo-revered.svg` (gestapeld), `logo-revered-horizontaal.svg` (nav), `logo-revered-monogram.svg` (smal scherm), `favicon.svg`, `apple-touch-icon.png`, `logo-revered.png` (JSON-LD + social), `og-revered.png` (deelkaart)
 - `llms.txt` (feitenblad, geen hefboom), `robots.txt`, `sitemap.xml`: technische laag
@@ -39,7 +40,9 @@ Volledige site in huisstijl v1.6 (kopletter Source Serif 4, tekstletter Inter, 1
 ## Regels die in de code verwerkt zitten (niet slopen)
 - Navigatie: onder 800px vouwen de links én de CTA achter één menuknop, zodat de balk op elke breedte één regel blijft. Nieuwe pagina met menu: neem het hele `<nav>`-blok inclusief `.nav-toggle` en `.nav-menu` over én laad `nav.js` in de `<head>`. De `aria-controls` van de knop moet naar het `id="hoofdmenu"` van `.nav-menu` wijzen.
 - Het kruimelpad is zelf ook een `<nav>` en zou dus de regel `nav{position:sticky}` opvangen; `.kruimels` zet dat expliciet terug op `static`. Verwijder dat niet, anders plakt het kruimelpad mee en valt het over de uitgeklapte menulade.
-- Eén maanvorm per pagina (alleen waar een log-card de held is)
+- Eén maanvorm per pagina (alleen waar een log-card de held is). Sinds 29 sep 2026 staat hij er ook echt: `.log-stage::before` in `styles.css`, en dus alleen op `index.html`. Zet hem nergens anders neer
+- Beeld is HTML en inline SVG, geen bitmaps: een diagram dat je als `.svg` of `.png` invoegt, kan de webfonts en de kleurtokens niet gebruiken en wordt op de telefoon onleesbaar klein. Alleen echte foto's en schermbeelden zijn bestanden, en die gaan in `afbeeldingen/`
+- Elk beeld met inhoud staat in een `<figure class="figuur">` met een `<figcaption>`: bij nagemaakte voorbeelden staat daar dat ze nagemaakt zijn, bij echte metingen het model en de meetdatum
 - Knoppen: altijd solide olijfgroen met crème tekst; beige nooit als knop
 - Alle cijfers in IBM Plex Mono; elk marktcijfer met bron
 - Prijzen staan op precies één plek als bron (`merk/REVERED-diensten-en-prijzen.md`) en worden herhaald in: werkwijze-prijzen.html (kaarten, tabel, catalogus, JSON-LD: OfferCatalog pakketten én OfferCatalog losse diensten), index.html (kicker + FAQ), contact.html (select), ai-info.html, tool-of-bureau.html, gids-wat-kost-geo.html (tabel, lijst, FAQ), veelgestelde-vragen.html (prijzen-groep), de 15 dienst-*.html-pagina's (kicker, prijssectie, JSON-LD Offer, FAQ), llms.txt (sectie Losse diensten), en `merk/REVERED-feitenblad.md`.

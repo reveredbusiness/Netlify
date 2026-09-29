@@ -712,3 +712,199 @@ a.gids-kaart.uitgelicht{border-color:var(--groen)}
 #cookiebanner .knop{cursor:pointer;font:inherit;font-weight:600;padding:9px 16px;border-radius:4px;border:1px solid var(--creme);background:var(--creme);color:var(--groen-donker)}
 #cookiebanner .knop-licht{background:transparent;color:var(--creme)}
 #cookiebanner .knop:focus-visible{outline:3px solid var(--beige,#D6C8B2);outline-offset:2px}
+
+/* ══ BEELD (29 sep 2026) ══════════════════════════════════════════════════
+   De site had buiten het logo geen enkele afbeelding. Dit blok voegt beeld toe
+   volgens blueprint §8: data als beeld, typografie als held, geen stockfoto's.
+   Alles is HTML + inline SVG in plaats van bitmaps, zodat het meeschaalt,
+   niets extra's laadt en automatisch in het palet blijft.                  */
+
+/* ── figuur: gedeelde omlijsting met onderschrift ── */
+.figuur{margin:30px 0 32px}
+.figuur > figcaption{
+  font-size:13.5px;line-height:1.6;color:var(--zacht);
+  margin-top:13px;padding-top:11px;border-top:1px solid var(--beige);max-width:70ch;
+}
+.figuur > figcaption a{color:var(--groen)}
+.artikel .figuur{margin:26px 0 30px}
+/* een figuur in een brede sectie blijft leesbreed */
+.figuur-smal{max-width:680px}
+
+/* ── voorbeeld van een AI-antwoord ──
+   Het bewijsstuk achter de kop op de homepage, in dezelfde vorm waarin een
+   bezoeker het zelf ziet. Bewust met [haken] en letters in plaats van namen:
+   voorbeelddata mag nergens op deze site per ongeluk echt lijken. */
+.antwoord{background:var(--wit);border:1px solid var(--beige);border-radius:14px;overflow:hidden}
+.antwoord-kop{
+  display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;
+  padding:13px 22px;background:var(--creme);border-bottom:1px solid var(--beige);
+}
+.antwoord-bron{
+  font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:1.4px;
+  text-transform:uppercase;color:var(--groen);
+}
+.antwoord-merk{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;
+  text-transform:uppercase;color:var(--zacht);
+  background:var(--wit);border:1px solid var(--beige);border-radius:999px;padding:3px 11px;
+}
+.antwoord-vraag{padding:20px 22px 0;font-size:16.5px;line-height:1.45;color:var(--groen-donker);font-weight:600}
+.antwoord-vraag .v{
+  display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.4px;
+  text-transform:uppercase;color:var(--zacht);font-weight:400;margin-bottom:8px;
+}
+.antwoord-body{padding:18px 22px 0;font-size:15.5px;color:#55573f}
+.antwoord-lijst{list-style:none;margin:14px 0 0;display:grid;gap:11px;counter-reset:aw}
+.antwoord-lijst li{counter-increment:aw;position:relative;padding-left:30px;line-height:1.55;font-size:15px}
+.antwoord-lijst li::before{
+  content:counter(aw) ".";position:absolute;left:0;top:0;
+  font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--groen);
+}
+.antwoord-lijst strong{color:var(--groen-donker)}
+.antwoord-jij{
+  display:flex;align-items:baseline;gap:12px;
+  margin:20px 22px 22px;padding:14px 17px;border-radius:10px;
+  background:var(--creme);border-left:3px solid var(--groen);
+  font-size:15.5px;line-height:1.5;color:var(--groen-donker);font-weight:600;
+}
+.antwoord-jij .nul{
+  font-family:'IBM Plex Mono',monospace;font-size:19px;font-weight:500;
+  color:var(--groen);letter-spacing:-.5px;flex-shrink:0;
+}
+
+/* ── de telling: genoemd, gelinkt, aanbevolen ──
+   Drie dingen die de meetmethode apart houdt en nooit optelt. Stond alleen als
+   zin in een tabelcel; als drie vlakken is in één blik te zien dát ze los staan. */
+.telling{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+.telling-kaart{background:var(--wit);border:1px solid var(--beige);border-radius:14px;padding:22px}
+.telling-kaart .teken{
+  display:flex;align-items:center;justify-content:center;width:40px;height:40px;
+  border-radius:999px;background:var(--creme);border:1px solid var(--beige);
+  color:var(--groen);margin-bottom:14px;
+}
+.telling-kaart .teken svg{display:block;width:19px;height:19px}
+.telling-kaart h3{font-size:18px;margin-bottom:6px}
+.telling-kaart p{font-size:14.5px;color:#55573f;line-height:1.55}
+.telling-regel{
+  display:flex;align-items:baseline;gap:14px;margin-top:18px;padding:15px 18px;
+  background:var(--creme);border-left:3px solid var(--groen);border-radius:0 10px 10px 0;
+  font-size:15px;line-height:1.55;color:#3d3f2f;
+}
+.telling-regel .som{
+  font-family:'IBM Plex Mono',monospace;font-size:15px;color:var(--groen);
+  white-space:nowrap;flex-shrink:0;
+}
+
+/* ── de twee klokken ──
+   Het snelheidsmodel dat overal in de teksten terugkomt: eigen pagina's en
+   feiten bewegen in weken, alles buiten je site in maanden. */
+.klokken{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:8px}
+.klok{background:var(--wit);border:1px solid var(--beige);border-radius:14px;padding:24px}
+.klok-kop{display:flex;align-items:center;gap:15px;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid var(--beige)}
+.klok-kop svg{display:block;width:48px;height:48px;flex-shrink:0;color:var(--groen)}
+.klok-tijd{
+  font-family:'Source Serif 4',serif;font-size:24px;font-weight:500;
+  color:var(--groen-donker);letter-spacing:-.3px;line-height:1.1;
+}
+.klok-tijd small{
+  display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.3px;
+  text-transform:uppercase;color:var(--zacht);font-weight:400;margin-top:6px;
+}
+.klok ul{list-style:none;display:grid;gap:10px;margin:0}
+.klok li{font-size:14.5px;line-height:1.5;color:#55573f;padding-left:21px;position:relative}
+.klok li::before{content:"";position:absolute;left:0;top:.5em;width:9px;height:9px;border-radius:999px;background:var(--beige)}
+.klok.snel li::before{background:var(--groen)}
+
+/* ── twee routes naar een antwoord ── */
+.routes{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
+.route{background:var(--wit);border:1px solid var(--beige);border-radius:14px;padding:22px}
+.route .num{
+  display:block;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:1.3px;
+  text-transform:uppercase;color:var(--groen);margin-bottom:11px;
+}
+.route h3{font-size:18px;line-height:1.25;margin-bottom:8px}
+.route p{font-size:14.5px;line-height:1.55;color:#55573f}
+.routes-samen{
+  position:relative;margin-top:34px;padding:20px 22px;border-radius:12px;
+  background:var(--creme);border:1px solid var(--beige);
+}
+/* de twee routes lopen zichtbaar samen in één antwoord */
+.routes-samen::before{content:"";position:absolute;left:50%;top:-18px;width:1px;height:18px;background:var(--beige)}
+.routes-samen .kop{
+  display:block;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:1.3px;
+  text-transform:uppercase;color:var(--groen);margin-bottom:8px;
+}
+.routes-samen p{font-size:15px;line-height:1.55;color:#3d3f2f;margin:0}
+
+/* ── één fundament, twee uitkomsten (SEO + GEO) ── */
+.systeem{margin-top:8px}
+.systeem-top{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.systeem-kolom{background:var(--wit);border:1px solid var(--beige);border-bottom:0;border-radius:14px 14px 0 0;padding:22px 22px 24px}
+.systeem-kolom .num{
+  display:block;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:1.3px;
+  text-transform:uppercase;color:var(--groen);margin-bottom:10px;
+}
+.systeem-kolom h3{font-size:18px;margin-bottom:7px}
+.systeem-kolom p{font-size:14.5px;line-height:1.55;color:#55573f}
+.systeem-basis{
+  background:var(--creme);border:1px solid var(--beige);border-radius:0 0 14px 14px;
+  padding:20px 22px;margin-top:-1px;
+}
+.systeem-basis .kop{
+  display:block;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:1.3px;
+  text-transform:uppercase;color:var(--groen);margin-bottom:9px;
+}
+.systeem-basis ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px 10px;margin:0}
+.systeem-basis li{
+  font-size:14px;color:#3d3f2f;background:var(--wit);
+  border:1px solid var(--beige);border-radius:999px;padding:6px 14px;
+}
+
+/* ── kennisbank: tegel per soort gids ──
+   Veertien identiek witte kaarten waren op één na niet uit elkaar te houden.
+   De tegel is geen plaatje maar een merk: mono-geometrie in beige en olijf,
+   één vast teken per soort, zodat de filterknoppen en de kaarten hetzelfde
+   zeggen. Bewust géén maanvorm: die blijft één per pagina. */
+.kb-sprite{position:absolute;width:0;height:0;overflow:hidden}
+.gids-kop{display:flex;align-items:center;gap:13px;margin-bottom:14px}
+.gids-kop .tag{margin-bottom:0}
+/* De tegels komen uit één <symbol>-sprite. Een gewone CSS-regel raakt de inhoud
+   van een <use> niet (die staat in een shadow tree), dus de kleuren staan als
+   inline style op de vormen zelf en lezen deze drie tokens uit. Custom properties
+   érven wél over, dus zo werkt de hover alsnog vanuit CSS. */
+.kb-tegel{
+  display:block;width:44px;height:44px;flex-shrink:0;
+  color:var(--groen);--tegel-vlak:var(--creme);--tegel-rand:var(--beige);
+}
+a.gids-kaart:hover .kb-tegel{--tegel-vlak:var(--wit);--tegel-rand:var(--groen)}
+
+/* ── maanvorm ──
+   De halve cirkel uit het logo, één per pagina en alleen waar de citatie-log
+   de held is (blueprint §8, README). Staat achter de kaart, nooit erop. */
+.log-stage::before{
+  content:"";position:absolute;z-index:0;
+  left:-26px;top:-14px;width:104px;height:208px;
+  border-radius:208px 0 0 208px;background:var(--beige);opacity:.5;
+}
+.log-card{position:relative;z-index:1}
+
+/* ── echte foto's en schermbeelden (zie afbeeldingen/LEESMIJ.md) ── */
+.beeld{
+  display:block;width:100%;height:auto;border-radius:12px;
+  border:1px solid var(--beige);background:var(--creme);
+}
+.beeld-portret{
+  width:104px;height:104px;border-radius:50%;object-fit:cover;
+  border:1px solid var(--beige);background:var(--beige);
+}
+
+@media (max-width:860px){
+  .telling,.klokken,.routes,.systeem-top{grid-template-columns:1fr}
+  .systeem-kolom{border-bottom:1px solid var(--beige);border-radius:14px}
+  .systeem-basis{border-radius:14px;margin-top:0}
+  .routes-samen{margin-top:26px}
+  .routes-samen::before{top:-14px;height:14px}
+  .antwoord-kop,.antwoord-vraag,.antwoord-body{padding-left:18px;padding-right:18px}
+  .antwoord-jij{margin-left:18px;margin-right:18px}
+  .log-stage::before{left:-14px;width:84px;height:168px;border-radius:168px 0 0 168px}
+}
