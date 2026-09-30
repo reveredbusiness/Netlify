@@ -27,7 +27,7 @@ De logo's staan bewust in de root, niet hier: ze horen bij de technische laag
 - **Alt-tekst:** beschrijf wat er staat. Bij een portret de naam. Puur
   decoratief beeld krijgt `alt=""`, maar dat hebben we hier niet.
 
-## De vier foto's die er nu staan
+## De zeven foto's die er nu staan
 
 | Bestand | Pagina | Bron (Pexels) |
 | --- | --- | --- |
@@ -35,6 +35,9 @@ De logo's staan bewust in de root, niet hier: ze horen bij de technische laag
 | `foto-werk.webp` | `meetmethode.html`, boven "Vijf vaste onderdelen" | [9222424](https://www.pexels.com/photo/9222424/) |
 | `foto-notities.webp` | `citatie-log.html`, bij "Hoe je het leest" | [204511](https://www.pexels.com/photo/204511/) |
 | `foto-bureau.webp` | `contact.html`, boven "Wat er daarna gebeurt" | [8850629](https://www.pexels.com/photo/8850629/) |
+| `foto-onderzoek.webp` | `index.html`, onder "Eigen onderzoek" | [7682243](https://www.pexels.com/photo/7682243/) |
+| `foto-scherm.webp` | `citatie-log.html`, bij "Achter één cijfer" | [5839454](https://www.pexels.com/photo/5839454/) |
+| `foto-werkplek.webp` | `meetmethode.html`, bij "Wat de meting níet kan" | [34017206](https://www.pexels.com/photo/34017206/) |
 
 Licentie: Pexels-licentie, vrij voor commercieel gebruik zonder naamsvermelding.
 Bewaar deze tabel, want zonder herkomst kun je later niet aantonen dat het mag.
