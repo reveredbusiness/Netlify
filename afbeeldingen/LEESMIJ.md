@@ -14,8 +14,8 @@ De logo's staan bewust in de root, niet hier: ze horen bij de technische laag
   een stockfoto staat nooit op een plek waar hij als Revered zelf gelezen kan
   worden (niet bij de founders, niet als "ons kantoor", niet als klant), en de
   alt-tekst beschrijft alleen wat er te zien is, zonder claim over wie het is.
-  Daarom staat er bewust géén foto op `over-revered.html`: daar zou een
-  onbekende op de foto gelezen worden als Yaiden of Djitza.
+  Daarom staan er op `over-revered.html` alleen de echte portretten van
+  Yaiden en Djitza, nooit stock.
 - **Formaat:** WebP, kwaliteit ~80. Bewaar het origineel buiten deze repo.
 - **Breedte:** twee keer de maat waarop het getoond wordt (retina), niet meer.
   Portret 104px op de site, dus 208px breed opslaan.
@@ -63,24 +63,12 @@ Bandformaat is altijd 1400x540 (`.figuur-band`, weergegeven op maximaal 860px).
 
 ## De twee soorten die nog ontbreken
 
-### 1. Portretten van de founders
-Staat als beslissing 3 in `playbook-run/beslissingen.md` en als punt 3 in
-`groeiplan/deel-03-website-conversie.md`. Nu staat er op
-`over-revered.html` een beige cirkel met een letter erin.
-
-Nodig: één zakelijk portret per founder, vierkant, 208×208px, effen muur of
-crème achtergrond, daglicht, geen stock-pose. Zodra ze er zijn:
-
-```html
-<img class="beeld-portret" src="afbeeldingen/founder-yaiden.webp"
-     alt="Yaiden [Achternaam]" width="104" height="104" loading="lazy">
-```
-
-Vervangt `<div class="foto" aria-hidden="true">Y</div>` in `over-revered.html`.
-Voeg tegelijk `image` en `sameAs` (LinkedIn) toe aan de twee Person-nodes, en
-de achternamen in de `founder`-array op alle pagina's met een Organization-node.
-Doe daarna hetzelfde bij pijler 03 op `index.html` en naast het formulier op
-`contact.html`, want daar staat de belofte "antwoord van een founder".
+### 1. Portretten van de founders (deels gedaan, 3 okt 2026)
+`founder-yaiden.webp` en `founder-djitza.webp` (208×208, eigen foto's, vierkant
+bijgesneden rond het gezicht, geen kleurbehandeling) staan op
+`over-revered.html`, met `image` op de twee Person-nodes. Nog open: achternamen
+en `sameAs` (LinkedIn) op de Person-nodes, en de portretten bij pijler 03 op
+`index.html` en naast het formulier op `contact.html`.
 
 ### 2. Schermbeelden van echte AI-antwoorden
 Op `index.html` staat nu een nagemaakt voorbeeld (`.antwoord`), expliciet

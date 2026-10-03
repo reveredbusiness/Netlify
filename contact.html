@@ -13,7 +13,7 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact: vraag de AI-proefmeting aan | Revered</title>
-<meta name="description" content="Vraag de AI-proefmeting aan: 10 vragen uit jouw markt door 3 AI-modellen, mét screenshots. €295 eenmalig, excl. btw, verrekend als je binnen 14 dagen ondertekent. Binnen 2 werkdagen antwoord van een founder.">
+<meta name="description" content="Vraag de AI-proefmeting aan: 10 vragen uit jouw markt, 3 AI-modellen, mét screenshots. €295 excl. btw, verrekend bij ondertekening.">
 <link rel="canonical" href="https://revered.nl/contact.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -22,7 +22,7 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
 <meta property="og:site_name" content="Revered">
 <meta property="og:locale" content="nl_NL">
 <meta property="og:title" content="Contact: vraag de AI-proefmeting aan | Revered">
-<meta property="og:description" content="Vraag de AI-proefmeting aan: 10 vragen uit jouw markt door 3 AI-modellen, mét screenshots. €295 eenmalig, excl. btw, verrekend als je binnen 14 dagen ondertekent. Binnen 2 werkdagen antwoord van een founder.">
+<meta property="og:description" content="Vraag de AI-proefmeting aan: 10 vragen uit jouw markt, 3 AI-modellen, mét screenshots. €295 excl. btw, verrekend bij ondertekening.">
 <meta property="og:url" content="https://revered.nl/contact.html">
 <meta property="og:image" content="https://revered.nl/og-revered.png">
 <meta property="og:image:width" content="1200">
@@ -30,7 +30,7 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
 <meta property="og:image:alt" content="Revered: ChatGPT noemt drie van je concurrenten. Jou niet. Naast een voorbeeld van de maandelijkse citatie-log.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact: vraag de AI-proefmeting aan | Revered">
-<meta name="twitter:description" content="Vraag de AI-proefmeting aan: 10 vragen uit jouw markt door 3 AI-modellen, mét screenshots. €295 eenmalig, excl. btw, verrekend als je binnen 14 dagen ondertekent. Binnen 2 werkdagen antwoord van een founder.">
+<meta name="twitter:description" content="Vraag de AI-proefmeting aan: 10 vragen uit jouw markt, 3 AI-modellen, mét screenshots. €295 excl. btw, verrekend bij ondertekening.">
 <meta name="twitter:image" content="https://revered.nl/og-revered.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -161,15 +161,20 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
          Verwijder nooit het verborgen veld form-name: zonder dat veld weet
          Netlify niet bij welk formulier een inzending hoort.
          =================================================================== -->
+    <div class="contact-grid">
     <div class="pm-kaart">
       <form class="pm-form" id="pm-form" name="proefmeting" method="post" action="/contact.html?verzonden=1" data-netlify="true" netlify-honeypot="_gotcha" novalidate>
         <input type="hidden" name="form-name" value="proefmeting">
         <div class="pm-veld">
-          <label for="pm-start">Waar wil je mee beginnen?</label>
-          <select id="pm-start" name="start">
-            <option>De AI-proefmeting (€295, verrekend bij ondertekening)</option>
-            <option>Eerst een kennismaking van 20 minuten</option>
+          <label for="pm-aanbod">Waar wil je mee beginnen?</label>
+          <select id="pm-aanbod" name="aanbod">
+            <option data-aanbod="proefmeting">AI-proefmeting (€295)</option>
+            <option data-aanbod="kern">Proefmeting, daarna de kern</option>
+            <option data-aanbod="versnellers">Proefmeting, daarna kern + versnellers</option>
+            <option data-aanbod="losse-diensten">Proefmeting, daarna losse diensten</option>
+            <option data-aanbod="kennismaking">Eerst een kennismaking (20 min)</option>
           </select>
+          <p class="bron" style="margin-top:8px">Je zit nergens aan vast: na de proefmeting beslis jij. De €295 verrekenen we als je binnen 14 dagen ondertekent. Alle prijzen excl. btw, zie <a href="werkwijze-prijzen.html">diensten &amp; prijzen</a>.</p>
         </div>
         <div class="pm-veld">
           <label for="pm-naam">Naam</label>
@@ -183,17 +188,6 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
           <label for="pm-website">Website</label>
           <input id="pm-website" type="url" name="website" required autocomplete="url" placeholder="https://bedrijf.nl">
           <p class="bron" style="margin-top:8px">Hierop draaien we de meting. Zonder site valt er niets te vergelijken.</p>
-        </div>
-        <div class="pm-veld">
-          <label for="pm-aanbod">Weet je al wat je zoekt? (optioneel)</label>
-          <select id="pm-aanbod" name="aanbod">
-            <option data-aanbod="nog-geen-idee">Weet ik nog niet, eerst zien waar we staan</option>
-            <option data-aanbod="proefmeting">Alleen de AI-proefmeting (€295 eenmalig)</option>
-            <option data-aanbod="kern">De kern: 9 diensten, €899 per maand</option>
-            <option data-aanbod="versnellers">De kern plus een of meer versnellers</option>
-            <option data-aanbod="losse-diensten">Een of meer losse diensten uit de catalogus</option>
-          </select>
-          <p class="bron" style="margin-top:8px">Dit verandert niets aan de proefmeting en je zit nergens aan vast. Alle prijzen zijn exclusief btw en staan open op <a href="werkwijze-prijzen.html">diensten &amp; prijzen</a>.</p>
         </div>
         <div class="pm-veld">
           <label for="pm-herkomst">Hoe kwam je bij ons terecht? (optioneel)</label>
@@ -218,6 +212,7 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
       <p class="pm-belofte">Binnen 2 werkdagen antwoord van Yaiden of Djitza.</p>
     </div>
 
+    <div class="contact-zij">
     <ul class="pm-zeker">
       <li><strong>Een van ons tweeën mailt terug</strong>Geen accountmanager, geen belscript. Yaiden of Djitza heeft je meting zelf gedraaid en legt uit wat eruit kwam.</li>
       <li><strong>De screenshots zitten erbij</strong>Je leest de antwoorden van alle drie de modellen na zoals ze eruit kwamen, ook de vragen waar je niet in voorkomt.</li>
@@ -229,6 +224,8 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
          <span>Of bel: <a href="tel:+31NUMMER">NUMMER</a></span> -->
     <div class="contactpad">
       <span>Liever eerst iets vragen? Mail <a href="mailto:reveredbusiness@gmail.com">reveredbusiness@gmail.com</a>, daar leest dezelfde persoon mee.</span>
+    </div>
+    </div>
     </div>
   </div>
 </section>
