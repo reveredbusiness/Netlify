@@ -37,6 +37,15 @@ Volledige site in huisstijl v1.6 (kopletter Source Serif 4, tekstletter Inter, 1
 7. **Zelfattributie**: het veld "Hoe kwam je bij ons terecht?" in contact.html moet als vast veld in de lead-administratie komen; vraag het ook in elk gesprek (playbook §2.5). Let op: geen enkele `<option>` in `contact.html` mag `value=""` hebben. Netlify stuurt een leeg veld als lege regel mee, waardoor je in de notificatiemail niet kunt zien of iemand de standaardoptie koos of het veld oversloeg, en dat is precies wat dit veld moet meten. De standaardopties hebben daarom sinds 19 sep 2026 een echte waarde (`nog-geen-idee` bij pakket, de optietekst zelf bij herkomst).
 8. **Zakelijke feiten in schema**: zodra KvK, adres, telefoon en oprichtingsdatum bestaan (e-mail staat er sinds 19 sep in): footer, ai-info én de Organization-node op alle 16 pagina's in één keer (`foundingDate`, `address`, `email`, `telephone`, `identifier`, `sameAs`).
 
+## SEO-structuur (ingericht 6 okt 2026)
+- **Money page = `werkwijze-prijzen.html`.** Die draagt de commerciële term ("SEO- en GEO-bureau") in title, H1 en intro. Bewust géén aparte bureau-pagina: twee pagina's zouden om dezelfde term concurreren en het domein is daar te jong voor. Verander je de H1, houd dan de term erin.
+- **Het cluster loopt ernaartoe.** Elke gids en vergelijkingspagina heeft onderaan een `.slot-na`-regel naar de money page, naast de knop naar het formulier. Nieuwe gids: neem die regel over.
+- **Gidsen linken contextueel naar dienstpagina's**, in de lopende tekst, niet in een "gerelateerd"-blok. Elke dienstpagina heeft minstens twee inkomende links uit de inhoud. Voeg je een dienst toe, link hem dan vanuit de gids waar hij thuishoort.
+- **Koppen in vraagvorm.** H2's op de gidsen stellen de vraag die de bezoeker typt en beantwoorden hem er direct onder; dat is wat AI-modellen citeren en wat in "Mensen vragen ook" belandt. Wijzig je een kop, wijzig dan de regel in de inhoudsopgave mee en **laat het `id` staan** (ankerlinks).
+- **Titels onder 60 tekens**, keyword vooraan, prijs erin waar die er stond. Google kapt af op pixelbreedte; boven de 60 verlies je informatie.
+- **Meta descriptions 120-160 tekens.** Elke pagina heeft er een, ook de noindex-pagina's (voor de deelkaart in mail en chat).
+- **Let op bij zoek-en-vervang in de FAQ**: die teksten staan dubbel, in de zichtbare `<details>` én in het JSON-LD. Een `<a href="...">` in een JSON-string breekt de JSON-LD. FAQ-antwoorden blijven platte tekst en blijven letterlijk gelijk aan `veelgestelde-vragen.html`.
+
 ## Regels die in de code verwerkt zitten (niet slopen)
 - Navigatie: onder 800px vouwen de links én de CTA achter één menuknop, zodat de balk op elke breedte één regel blijft. Nieuwe pagina met menu: neem het hele `<nav>`-blok inclusief `.nav-toggle` en `.nav-menu` over én laad `nav.js` in de `<head>`. De `aria-controls` van de knop moet naar het `id="hoofdmenu"` van `.nav-menu` wijzen.
 - Het kruimelpad is zelf ook een `<nav>` en zou dus de regel `nav{position:sticky}` opvangen; `.kruimels` zet dat expliciet terug op `static`. Verwijder dat niet, anders plakt het kruimelpad mee en valt het over de uitgeklapte menulade.

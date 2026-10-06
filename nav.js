@@ -12,8 +12,12 @@
    bereikbaar. Zou het script met defer laden, dan zag je op de telefoon
    eerst het volledige menu en klapte het daarna weg. */
 (function () {
+  // De klasse .js-nav wordt al vóór de eerste paint gezet door een inline
+  // regeltje in de <head>; anders zag je op de telefoon eerst het volledige
+  // menu staan en klapte het daarna pas weg. Hier staat hij nog als vangnet
+  // voor het geval dit bestand los wordt ingeladen.
   var doc = document.documentElement;
-  doc.className += ' js-nav';
+  if (doc.className.indexOf('js-nav') === -1) doc.className += ' js-nav';
 
   function start() {
     var knop = document.querySelector('.nav-toggle');

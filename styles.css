@@ -505,6 +505,11 @@ section.sectie-formulier{padding-top:34px}
 }
 
 /* slot & footer */
+/* Tweede, zachtere uitgang onder de knop in een slotblok. De gidsen gingen
+   allemaal alleen naar het formulier; wie nog niet zover is, moest terug via
+   het menu. Deze regel stuurt dat deel naar de prijzen. */
+.slot-na{margin:18px auto 0;font-size:14.5px;color:var(--zacht)}
+.slot-na a{color:var(--groen)}
 .slot{text-align:center;padding:84px 0 92px}
 .slot h2{margin:0 auto 16px;max-width:30ch}
 .nobr{white-space:nowrap}

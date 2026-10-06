@@ -19,6 +19,7 @@ Na de push is de site binnen ±1 minuut bijgewerkt. Commit als Revered <reveredb
 - Beeld: diagrammen en iconen zijn HTML + inline SVG in de pagina (blok `BEELD` onderaan `styles.css`), nooit losse .svg/.png. Foto's zijn wel bestanden en staan in `afbeeldingen/`; zie `afbeeldingen/LEESMIJ.md` voor formaat, alt-tekst, de kleurbehandeling en de herkomst van elke foto.
 - Stockfoto's staan sinds 29 sep 2026 op de site, tegen blueprint §8 in, op uitdrukkelijk verzoek. Twee regels blijven wél gelden: een stockfoto mag nooit op een plek staan waar hij als Revered zelf gelezen kan worden (dus niet bij de founders, niet als kantoor, niet als klant), en de alt-tekst beschrijft alleen wat er te zien is, zonder claim over wie het is.
 - Doe geen `git push --force`.
+- SEO-structuur (money page, cluster, vraagvorm-koppen, titellengte) staat in README.md onder "SEO-structuur". Nieuwe pagina: loop die lijst langs.
 - `styles.css` wordt op elke pagina geladen als `styles.css?v=JJJJMMDD`. Wijzig je de CSS, hoog die datum dan op alle pagina's tegelijk op, anders zien bezoekers met een bewaarde oude versie een kapotte opmaak.
 - Navigatie en menuknop staan op elke pagina met een menu identiek in de HTML; `nav.js` hoort in de `<head>` zonder `defer`. Wijzig je het menu, wijzig het op alle pagina's tegelijk (zie README, "Regels die in de code verwerkt zitten").
 - Geen `<option value="">` in formulieren: een leeg veld komt als lege regel in de notificatiemail, waardoor 'standaardoptie gekozen' en 'niet ingevuld' niet te onderscheiden zijn. Geef elke optie een echte waarde.
