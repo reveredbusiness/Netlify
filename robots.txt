@@ -1,4 +1,54 @@
+# Alles is welkom. De AI-crawlers staan hieronder met naam genoemd: een
+# wildcard dekt ze al, maar expliciet is controleerbaar, en dat is precies
+# wat we anderen op gids-llms-txt.html aanraden te checken.
+
 User-agent: *
+Allow: /
+
+# OpenAI: GPTBot traint en indexeert, OAI-SearchBot haalt live op voor ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google: apart van Googlebot, dit stuurt Gemini en AI Overviews
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Microsoft Copilot en Bing (ChatGPT leunt voor live zoeken op de Bing-index)
+User-agent: bingbot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl: dataset waar veel modellen op getraind zijn
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://revered.nl/sitemap.xml
