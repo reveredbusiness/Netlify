@@ -978,3 +978,41 @@ a.gids-kaart:hover .kb-tegel{--tegel-vlak:var(--wit);--tegel-rand:var(--groen)}
   .antwoord-jij{margin-left:18px;margin-right:18px}
   .log-stage::before{left:-14px;width:84px;height:168px;border-radius:168px 0 0 168px}
 }
+
+/* ── hero: het AI-antwoord als beeld bij de kop (7 okt 2026) ──
+   De kop noemt het probleem ("ChatGPT noemt drie van je concurrenten. Jou niet."),
+   dus het beeld ernaast laat dat probleem zien. De citatie-log staat als bewijs in
+   de sectie direct eronder. Het antwoord bouwt zich kort op zoals in een chat; bij
+   reduced motion staat alles er meteen. */
+.hero-figuur{margin:0}
+.antwoord-hero{box-shadow:0 18px 40px -24px rgba(47,49,34,.35)}
+.antwoord-hero .antwoord-jij{
+  background:var(--groen-paneel);border-left:0;color:var(--creme);font-weight:500;
+  align-items:center;gap:14px;
+}
+.antwoord-hero .antwoord-jij .nul{font-size:30px;color:var(--beige);line-height:1}
+.hero-figuur > figcaption{font-size:13px}
+@keyframes antwoord-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.antwoord-hero .antwoord-body > p,
+.antwoord-hero .antwoord-lijst li,
+.antwoord-hero .antwoord-jij{animation:antwoord-in .5s ease-out both}
+.antwoord-hero .antwoord-body > p{animation-delay:.25s}
+.antwoord-hero .antwoord-lijst li:nth-child(1){animation-delay:.6s}
+.antwoord-hero .antwoord-lijst li:nth-child(2){animation-delay:.9s}
+.antwoord-hero .antwoord-lijst li:nth-child(3){animation-delay:1.2s}
+.antwoord-hero .antwoord-jij{animation-delay:1.8s}
+@media (prefers-reduced-motion: reduce){
+  .antwoord-hero .antwoord-body > p,
+  .antwoord-hero .antwoord-lijst li,
+  .antwoord-hero .antwoord-jij{animation:none}
+}
+
+/* citatie-log op de homepage: één getal met het verloop sinds de nulmeting */
+.log-verloop{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-top:20px}
+.log-verloop .log-metric{margin-top:0}
+.log-lijn{width:170px;height:72px;flex-shrink:0;color:var(--beige);overflow:visible}
+.log-lijn text{font-family:'IBM Plex Mono',monospace;font-size:11px;fill:rgba(248,242,230,.72)}
+@media (max-width:480px){
+  .log-verloop .log-metric .delta{white-space:nowrap}
+  .log-lijn{width:118px;height:60px}
+}
