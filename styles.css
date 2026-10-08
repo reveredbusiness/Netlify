@@ -872,7 +872,7 @@ a.gids-kaart.uitgelicht p{max-width:62ch}
    Veertien identiek witte kaarten waren op één na niet uit elkaar te houden.
    De tegel is geen plaatje maar een merk: mono-geometrie in beige en olijf,
    één vast teken per soort, zodat de filterknoppen en de kaarten hetzelfde
-   zeggen. Bewust géén maanvorm: die blijft één per pagina. */
+   zeggen. */
 .kb-sprite{position:absolute;width:0;height:0;overflow:hidden}
 .gids-kop{display:flex;align-items:center;gap:13px;margin-bottom:14px}
 .gids-kop .tag{margin-bottom:0}
@@ -886,14 +886,6 @@ a.gids-kaart.uitgelicht p{max-width:62ch}
 }
 a.gids-kaart:hover .kb-tegel{--tegel-vlak:var(--wit);--tegel-rand:var(--groen)}
 
-/* ── maanvorm ──
-   De halve cirkel uit het logo, één per pagina en alleen waar de citatie-log
-   de held is (blueprint §8, README). Staat achter de kaart, nooit erop. */
-.log-stage::before{
-  content:"";position:absolute;z-index:0;
-  left:-26px;top:-14px;width:104px;height:208px;
-  border-radius:208px 0 0 208px;background:var(--beige);opacity:.5;
-}
 .log-card{position:relative;z-index:1}
 
 /* ── fotografie ──
@@ -935,7 +927,6 @@ a.gids-kaart:hover .kb-tegel{--tegel-vlak:var(--wit);--tegel-rand:var(--groen)}
   .routes-samen::before{top:-14px;height:14px}
   .antwoord-kop,.antwoord-vraag,.antwoord-body{padding-left:18px;padding-right:18px}
   .antwoord-jij{margin-left:18px;margin-right:18px}
-  .log-stage::before{left:-14px;width:84px;height:168px;border-radius:168px 0 0 168px}
 }
 
 /* ── hero: het AI-antwoord als beeld bij de kop (7 okt 2026) ──
