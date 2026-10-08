@@ -24,7 +24,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
 <style>
 :root{
   --groen:#62654B; --groen-donker:#3d3f2f; --paneel:#4E5140;
@@ -32,7 +32,6 @@
   --rand-veld:#8F8468;
   --serif:'Source Serif 4',Charter,Georgia,serif;
   --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-  --mono:'IBM Plex Mono','DejaVu Sans Mono',monospace;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -44,7 +43,7 @@ h2{font-family:var(--serif);font-weight:500;font-size:clamp(23px,3.4vw,29px);lin
 h3{font-family:var(--serif);font-weight:500;font-size:19px;color:var(--groen-donker)}
 p{color:#55573f}
 a{color:var(--groen)}
-.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--groen);margin-bottom:12px}
+.eyebrow{font-size:15px;font-weight:600;color:var(--groen);margin-bottom:12px}
 .btn{display:inline-block;background:var(--groen);color:var(--creme);padding:15px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:16px;border:1.5px solid var(--groen);cursor:pointer;font-family:var(--sans);transition:background .15s ease}
 .btn:hover{background:var(--groen-donker);border-color:var(--groen-donker)}
 .btn-stil{background:transparent;color:var(--groen);border-color:var(--rand-veld);font-weight:500;padding:12px 20px;font-size:15px}
@@ -52,7 +51,7 @@ a{color:var(--groen)}
 section.wrap{padding:52px 24px 56px;border-top:1px solid var(--beige)}
 
 .merkbalk{padding:26px 24px 0}
-.merkbalk .naam{font-family:var(--serif);font-size:15px;letter-spacing:4px;text-transform:uppercase;color:var(--groen-donker)}
+.merkbalk img{display:block;height:30px;width:auto}
 
 .hero.wrap{padding:34px 24px 46px}
 .hero p.sub{margin-top:18px;font-size:18px}
@@ -60,7 +59,7 @@ section.wrap{padding:52px 24px 56px;border-top:1px solid var(--beige)}
 /* afspraakkaart */
 .kaart{background:var(--paneel);color:var(--creme);border-radius:8px;padding:28px 30px 24px;margin-top:30px;position:relative}
 .kaart::before{content:"";position:absolute;z-index:-1;left:-22px;top:-16px;width:90px;height:180px;border-radius:180px 0 0 180px;background:var(--beige);opacity:.55}
-.kaart .boven{font-family:var(--mono);font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--beige);margin-bottom:16px}
+.kaart .boven{font-size:14px;font-weight:600;color:var(--beige);margin-bottom:16px}
 .kaart .tijd{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
 .kaart .tijd .groot{font-family:var(--serif);font-size:54px;font-weight:500;line-height:1;color:var(--creme)}
 .kaart .tijd .duur{font-size:15px;color:var(--beige);font-weight:600}
@@ -68,7 +67,7 @@ section.wrap{padding:52px 24px 56px;border-top:1px solid var(--beige)}
 .kaart .rijen{margin-top:18px;border-top:1px solid rgba(248,242,230,.3)}
 .kaart .rij{display:flex;gap:14px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(248,242,230,.3);font-size:14.5px}
 .kaart .rij:last-child{border-bottom:none}
-.kaart .rij .k{font-family:var(--mono);font-size:11.5px;color:rgba(248,242,230,.72);width:46px;flex-shrink:0}
+.kaart .rij .k{font-size:13.5px;color:rgba(248,242,230,.72);width:58px;flex-shrink:0}
 .kaart .rij .v{color:var(--creme)}
 
 /* zelf noteren */
@@ -96,13 +95,13 @@ section.wrap{padding:52px 24px 56px;border-top:1px solid var(--beige)}
 .tijdlijn{list-style:none;margin-top:26px;display:grid;gap:20px}
 .tijdlijn li{border-left:3px solid var(--beige);padding-left:20px}
 .tijdlijn li.nu{border-left-color:var(--groen)}
-.tijdlijn .min{font-family:var(--mono);font-size:12.5px;color:var(--groen);display:block;margin-bottom:5px}
+.tijdlijn .min{font-variant-numeric:tabular-nums;font-size:14px;font-weight:600;color:var(--groen);display:block;margin-bottom:5px}
 .tijdlijn h3{font-size:18px;margin-bottom:4px}
 .tijdlijn p{font-size:15.5px}
 
 /* vooraf-blok */
 .vooraf{background:var(--paneel);color:var(--creme);border-radius:12px;padding:26px 28px;margin-top:26px}
-.vooraf .kop{font-family:var(--mono);font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--beige);margin-bottom:10px}
+.vooraf .kop{font-size:14px;font-weight:600;color:var(--beige);margin-bottom:10px}
 .vooraf h3{color:var(--creme);font-size:20px;margin-bottom:10px}
 .vooraf p{color:#e6ded0;font-size:15.5px;margin-bottom:12px}
 .vooraf p:last-child{margin-bottom:0}
@@ -126,8 +125,7 @@ section.wrap{padding:52px 24px 56px;border-top:1px solid var(--beige)}
 .niet li::before{content:"";position:absolute;left:3px;top:14px;width:12px;height:1px;background:var(--zacht)}
 
 .slot{text-align:center;padding:48px 24px 58px;border-top:1px solid var(--beige)}
-.slot .merk{font-family:var(--serif);font-size:14px;letter-spacing:4px;text-transform:uppercase;color:var(--groen-donker);margin-bottom:8px;display:block}
-.slot p{font-family:var(--mono);font-size:12.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--zacht)}
+.slot p{font-size:15px;color:var(--zacht)}
 
 @media (max-width:560px){
   body{font-size:16px}
@@ -144,7 +142,7 @@ section.wrap{padding:52px 24px 56px;border-top:1px solid var(--beige)}
 </head>
 <body>
 
-<div class="wrap merkbalk"><span class="naam">Revered</span></div>
+<div class="wrap merkbalk"><img src="logo-revered-horizontaal.svg" alt="Revered" width="114" height="30"></div>
 
 <header class="wrap hero">
   <p class="eyebrow">Je gesprek staat gepland</p>
@@ -159,9 +157,9 @@ section.wrap{padding:52px 24px 56px;border-top:1px solid var(--beige)}
     </div>
     <p class="dag">De datum en de link staan in je agenda-uitnodiging.</p>
     <div class="rijen">
-      <div class="rij"><span class="k">waar</span><span class="v">Videogesprek, je kijkt mee op het scherm</span></div>
-      <div class="rij"><span class="k">kosten</span><span class="v">Geen, en je hoeft niets te beslissen</span></div>
-      <div class="rij"><span class="k">daarna</span><span class="v">Eén A4 met wat we zagen, ook als je niets afneemt</span></div>
+      <div class="rij"><span class="k">Waar</span><span class="v">Videogesprek, je kijkt mee op het scherm</span></div>
+      <div class="rij"><span class="k">Kosten</span><span class="v">Geen, en je hoeft niets te beslissen</span></div>
+      <div class="rij"><span class="k">Daarna</span><span class="v">Eén A4 met wat we zagen, ook als je niets afneemt</span></div>
     </div>
   </div>
 
@@ -188,16 +186,15 @@ section.wrap{padding:52px 24px 56px;border-top:1px solid var(--beige)}
 </header>
 
 <section class="wrap">
-  <p class="eyebrow">Wat er tot dan gebeurt</p>
   <h2>Je hoort ons nog één keer</h2>
   <ul class="tijdlijn">
     <li class="nu">
-      <span class="min">de dag ervoor</span>
+      <span class="min">De dag ervoor</span>
       <h3>We bellen je drie minuten</h3>
       <p>Geen verkoop, geen voorbereiding nodig. We checken of het nog staat en vragen één ding: waar je het liefst antwoord op wilt. Daar beginnen we het gesprek dan mee. Neem je niet op, dan proberen we het later nog een keer en laten we het daarna rusten.</p>
     </li>
     <li>
-      <span class="min">een uur vooraf</span>
+      <span class="min">Een uur vooraf</span>
       <h3>Een herinnering en de link</h3>
       <p>Verder niets. Je krijgt van ons geen reeks berichten.</p>
     </li>
@@ -205,26 +202,25 @@ section.wrap{padding:52px 24px 56px;border-top:1px solid var(--beige)}
 </section>
 
 <section class="wrap">
-  <p class="eyebrow">Het gesprek</p>
   <h2>Wat we in dertig minuten doen</h2>
   <ul class="tijdlijn">
     <li>
-      <span class="min">00 tot 05</span>
+      <span class="min">Minuut 0 tot 5</span>
       <h3>Jouw situatie</h3>
       <p>Waar komen je aanvragen nu vandaan, wat loopt er al, en waar zit de ergernis. Jij praat, wij schrijven mee.</p>
     </li>
     <li class="nu">
-      <span class="min">05 tot 20</span>
+      <span class="min">Minuut 5 tot 20</span>
       <h3>We kijken live mee op het scherm</h3>
       <p>We leggen jouw bedrijf naast de vragen die je kopers echt intypen, bij Google en bij een AI. Je ziet wie er wel genoemd wordt, wie niet, en of er ooit naar jouw site wordt verwezen. Dit is het deel waar de meeste mensen iets zien wat ze nog niet wisten.</p>
     </li>
     <li>
-      <span class="min">20 tot 28</span>
+      <span class="min">Minuut 20 tot 28</span>
       <h3>Wat er aan te doen is</h3>
       <p>De drie dingen die bij jou het meeste verschil maken, in de juiste volgorde. Ook als twee daarvan iets zijn dat je zelf kunt doen.</p>
     </li>
     <li>
-      <span class="min">28 tot 30</span>
+      <span class="min">Minuut 28 tot 30</span>
       <h3>Eerlijke conclusie</h3>
       <p>Past het, of past het niet. Past het niet, dan is dat het einde van het gesprek en niet het begin van een traject.</p>
     </li>
@@ -232,7 +228,6 @@ section.wrap{padding:52px 24px 56px;border-top:1px solid var(--beige)}
 </section>
 
 <section class="wrap">
-  <p class="eyebrow">Voorbereiding</p>
   <h2>Eén ding dat je vanavond kunt doen</h2>
 
   <div class="vooraf">
@@ -250,8 +245,7 @@ section.wrap{padding:52px 24px 56px;border-top:1px solid var(--beige)}
 </section>
 
 <section class="wrap">
-  <p class="eyebrow">Wat je overhoudt</p>
-  <h2>Ook als je niets afneemt</h2>
+  <h2>Wat je overhoudt, ook als je niets afneemt</h2>
   <div class="belofte">
     <p>Na afloop krijg je één A4 met wat we hebben gezien: <b>hoe je er nu voor staat</b> bij de vragen die we hebben bekeken, <b>welke bedrijven er in plaats van jou naar boven komen</b>, en <b>wat je zelf kunt oppakken</b> zonder ons.</p>
     <p>Geen voorstel, geen prijslijst, geen pakketnaam op dat blad. Je krijgt het los van wat je beslist en je mag ermee doen wat je wil, ook het aan een ander bureau geven.</p>
@@ -259,7 +253,6 @@ section.wrap{padding:52px 24px 56px;border-top:1px solid var(--beige)}
 </section>
 
 <section class="wrap">
-  <p class="eyebrow">Eerlijk vooraf</p>
   <h2>Wat er niet gaat gebeuren</h2>
   <ul class="niet">
     <li>Geen pitch waar je je doorheen moet zitten. Past het niet, dan hangen we op bij minuut twaalf.</li>
@@ -270,7 +263,6 @@ section.wrap{padding:52px 24px 56px;border-top:1px solid var(--beige)}
 </section>
 
 <div class="slot">
-  <span class="merk">Revered</span>
   <p>Tot binnenkort</p>
   <p class="terug"><a href="https://revered.nl/">revered.nl</a> &middot; <a href="https://revered.nl/werkwijze-prijzen.html">diensten &amp; prijzen</a> &middot; <a href="https://revered.nl/meetmethode.html">zo meten we</a></p>
 </div>
