@@ -41,6 +41,7 @@ Volledige site in huisstijl v1.6 (kopletter Source Serif 4, tekstletter Inter, 1
 
 ## SEO-structuur (ingericht 6 okt 2026)
 - **Money page = `werkwijze-prijzen.html`** (label 'Werkwijze'). Sinds 9 okt 2026 draagt die de positionering voor installateurs en vakbedrijven, niet meer "SEO- en GEO-bureau". De regel "geen nieuwe pagina's en niet bouwen aan de eigen SEO tot 15 klanten" (plan §14) is op 9 okt 2026 's avonds door de founders losgelaten: er komen ads, de site telt mee (besluitenlog F1). Nieuwe pagina's en eigen SEO-werk mogen weer, per stap op localhost getoond en goedgekeurd.
+- **Hersteld op 9 okt 2026 (avond, besluitenlog F10):** de ombouw van 9 okt had de money page gehalveerd en de clusterlinks weggehaald; die structuur staat weer, zonder prijzen. Haal geen clusterlinks of secties weg zonder besluit van de founders.
 - **Het cluster loopt ernaartoe.** Elke gids en vergelijkingspagina heeft onderaan een `.slot-na`-regel naar de money page, naast de knop naar het formulier. Nieuwe gids: neem die regel over.
 - **Gidsen linken contextueel naar dienstpagina's**, in de lopende tekst, niet in een "gerelateerd"-blok. Elke dienstpagina heeft minstens twee inkomende links uit de inhoud. Voeg je een dienst toe, link hem dan vanuit de gids waar hij thuishoort.
 - **Koppen in vraagvorm.** H2's op de gidsen stellen de vraag die de bezoeker typt en beantwoorden hem er direct onder; dat is wat AI-modellen citeren en wat in "Mensen vragen ook" belandt. Wijzig je een kop, wijzig dan de regel in de inhoudsopgave mee en **laat het `id` staan** (ankerlinks).
