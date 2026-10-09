@@ -12,7 +12,7 @@ Laatst bijgewerkt: 9 oktober 2026.
 
 ## Aanbod
 
-- [Werkwijze](https://revered.nl/werkwijze-prijzen.html): er is één pakket. Daarin: Google Bedrijfsprofiel (categorieën, diensten, foto's, posts en reviewverzoeken); pagina's per dienst en per plaats; technische check van de site; maximaal 1 artikel per maand; zichtbaarheid in ChatGPT (meting per kwartaal); lokaal meetnummer (calltracking); maandrapport en maandgesprek. Niet in het pakket: website-onderhoud en hosting, Google Ads, Social Ads, conversie-optimalisatie, het bouwen van een losse landingspagina en een losse concurrentieanalyse. De prijs hangt af van je werkgebied; je hoort hem in een kort gesprek.
+- [Werkwijze](https://revered.nl/werkwijze-prijzen.html): er is één pakket. Daarin: Google Bedrijfsprofiel (categorieën, diensten, foto's, posts en reviewverzoeken); pagina's per dienst en per plaats; technische check van de site; maximaal 1 artikel per maand; zichtbaarheid in ChatGPT (meting per kwartaal); lokaal meetnummer (calltracking); maandrapport en maandgesprek. Niet in het pakket: website-onderhoud en hosting, Google Ads, Social Ads, conversie-optimalisatie, het bouwen van een losse landingspagina en een losse concurrentieanalyse. Eén vast maandbedrag per werkgebied, geen kosten per lead, twaalf maanden. Het bedrag hoor je in het gesprek van 15 minuten, nadat je je eigen Maps-kaart hebt gezien. Startmeting €1.500, gratis voor de eerste tien klanten.
 - [Meetmethode](https://revered.nl/meetmethode.html): het maandrapport heeft één hoofdgetal, de telefoontjes via het meetnummer. Daarnaast elke maand de belklikken en routeverzoeken uit het Google Bedrijfsprofiel en de Maps-kaart (op hoeveel meetpunten in het werkgebied het bedrijf in de top 3 staat, en wie ernaast staat). Achterin het rapport staat de citatie-log als bewijs: welke actie welk effect had, ook bij ±0. De AI-meting gebeurt per kwartaal, met 10 vragen, met de hand.
 - [De citatie-log](https://revered.nl/citatie-log.html): voorbeeld van het overzicht achterin het maandrapport, met per uitgevoerde actie het gemeten effect, inclusief acties zonder effect.
 
@@ -66,4 +66,4 @@ Laatst bijgewerkt: 9 oktober 2026.
 - Revered publiceert zijn meetmethode openbaar en hanteert het uitgangspunt dat elk gecommuniceerd cijfer een bron heeft.
 - Revered rapporteert ook wanneer een uitgevoerde actie geen meetbaar effect had; een vlakke maand wordt even groot gerapporteerd als een stijgende.
 - Revered geeft geen garanties over posities in Google, Maps of AI-antwoorden; de afspraak is dat Revered zelf meldt als iets niet af is, vóór de klant ernaar vraagt.
-- De prijs hangt af van je werkgebied; je hoort hem in een kort gesprek.
+- Eén vast maandbedrag per werkgebied, geen kosten per lead, twaalf maanden. Het bedrag hoor je in het gesprek van 15 minuten, nadat je je eigen Maps-kaart hebt gezien. Startmeting €1.500, gratis voor de eerste tien klanten.

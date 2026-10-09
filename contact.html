@@ -173,14 +173,21 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
         <div class="pm-veld">
           <label for="pm-aanbod">Wat voor bedrijf heb je, en in welk werkgebied? (optioneel)</label>
           <input id="pm-aanbod" type="text" name="aanbod" autocomplete="off" placeholder="Bijvoorbeeld: installateur, warmtepompen, regio Utrecht">
-          <p class="bron" style="margin-top:8px">De prijs hangt af van je werkgebied; je hoort hem in een kort gesprek.</p>
         </div>
         <div class="pm-veld">
           <label for="pm-naam">Naam</label>
           <input id="pm-naam" type="text" name="naam" required autocomplete="name" placeholder="Voor- en achternaam">
         </div>
         <div class="pm-veld">
-          <label for="pm-email">Werk-e-mail</label>
+          <label for="pm-bedrijf">Bedrijf</label>
+          <input id="pm-bedrijf" type="text" name="bedrijf" required autocomplete="organization" placeholder="Naam van je bedrijf">
+        </div>
+        <div class="pm-veld">
+          <label for="pm-telefoon">Telefoon</label>
+          <input id="pm-telefoon" type="tel" name="telefoon" required autocomplete="tel" inputmode="tel" placeholder="06 12345678">
+        </div>
+        <div class="pm-veld">
+          <label for="pm-email">E-mail</label>
           <input id="pm-email" type="email" name="email" required autocomplete="email" placeholder="jij@bedrijf.nl">
         </div>
         <div class="pm-veld">
@@ -215,7 +222,7 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
     <ul class="pm-zeker">
       <li><strong>Een van ons tweeën neemt contact op</strong>Geen accountmanager. Yaiden of Djitza stelt een tijd voor een gesprek van 15 minuten voor.</li>
       <li><strong>Je ziet waar je nu staat</strong>We laten zien op hoeveel plekken in je werkgebied je in de top 3 van Google Maps staat, en wie er naast je staat.</li>
-      <li><strong>Je hoort de prijs</strong>De prijs hangt af van je werkgebied; je hoort hem in een kort gesprek.</li>
+      <li><strong>Je hoort de prijs</strong>Eén vast maandbedrag per werkgebied, geen kosten per lead, twaalf maanden. Het bedrag hoor je in het gesprek van 15 minuten, nadat je je eigen Maps-kaart hebt gezien. Startmeting €1.500, gratis voor de eerste tien klanten.</li>
     </ul>
     <p class="pm-avg">Je gegevens gebruiken we alleen om contact met je op te nemen over je aanvraag. Geen mailinglijst, geen doorverkoop. Wil je dat we ze daarna wissen, dan vraag je dat en doen we dat. Meer staat in de <a href="privacy.html">privacyverklaring</a>.</p>
     <!-- Telefoonnummer staat er bewust nog niet bij: liever geen nummer dan een
@@ -277,7 +284,7 @@ gtag('js',new Date());gtag('config','G-Z3MCDM39H8',{'anonymize_ip':true});
     });
     if(eersteFout){
       eersteFout.focus();
-      toon('mislukt','Er ontbreekt nog iets','Vul je naam, een werk-e-mailadres en je website in.');
+      toon('mislukt','Er ontbreekt nog iets','Vul je naam, je bedrijf, je telefoonnummer, je e-mailadres en je website in.');
       return;
     }
     var knop=form.querySelector('button[type=submit]'), oud=knop.textContent;
