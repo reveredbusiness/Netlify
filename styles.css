@@ -954,3 +954,8 @@ a.gids-kaart:hover .kb-tegel{--tegel-vlak:var(--wit);--tegel-rand:var(--groen)}
   .log-verloop .log-metric .delta{white-space:nowrap}
   .log-lijn{width:118px;height:60px}
 }
+
+/* Twee kolommen voor de verdediging op de werkwijzepagina (9 okt 2026) */
+.verdediging.twee{display:grid;grid-template-columns:1fr 1fr;gap:4px 44px}
+.verdediging.twee p{max-width:none}
+@media (max-width:800px){.verdediging.twee{grid-template-columns:1fr}}
