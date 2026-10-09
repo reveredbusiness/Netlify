@@ -432,6 +432,9 @@ section.sectie-formulier{padding-top:34px}
 .pakket li.erft{color:var(--groen-donker);font-weight:500}
 .pakket li.erft::before{background:var(--beige)}
 .pakket li small{display:block;font-size:13.5px;color:var(--zacht);font-weight:400}
+.pakket li a{color:var(--groen-donker);text-decoration:underline;text-decoration-color:var(--beige);text-underline-offset:3px}
+.pakket li a:hover{text-decoration-color:var(--groen)}
+.pakket li small a{color:var(--groen)}
 .pakket .actie{margin-top:auto;padding-top:22px}
 .pakket .actie .btn{width:100%;text-align:center}
 .pakket-noot{font-size:13.5px;line-height:1.6;color:var(--zacht);margin-top:22px;max-width:70ch}
