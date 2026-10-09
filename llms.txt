@@ -28,6 +28,14 @@ Laatst bijgewerkt: 9 oktober 2026.
 - [Lokaal meetnummer (calltracking)](https://revered.nl/dienst-calltracking.html): telt de telefoontjes die via Google en Maps binnenkomen.
 - [Maandrapport en maandgesprek](https://revered.nl/dienst-rapportage-strategiegesprek.html): het rapport met het hoofdgetal en het gesprek erover.
 
+## Overige diensten (elk met een eigen pagina)
+- [Landingspagina bouwen](https://revered.nl/dienst-landingspagina-bouwen.html): bouw van een conversiegerichte hoofdpagina.
+- [Website-onderhoud en hosting](https://revered.nl/dienst-website-onderhoud.html): updates, back-ups, beveiliging, hosting.
+- [Google Ads beheer](https://revered.nl/dienst-google-ads-beheer.html): campagnebeheer, exclusief advertentiebudget.
+- [Social Ads beheer](https://revered.nl/dienst-social-ads-beheer.html): campagnebeheer op Meta en Instagram, exclusief advertentiebudget.
+- [Conversie-optimalisatie](https://revered.nl/dienst-conversie-optimalisatie.html): A/B-testen, formulieroptimalisatie, heatmaps.
+- [Concurrentieanalyse](https://revered.nl/dienst-concurrentieanalyse.html): analyse van 3 tot 5 concurrenten.
+
 ## Organisatie
 
 - [Over Revered](https://revered.nl/over-revered.html): opgericht door Yaiden en Djitza. Doelgroep: installateurs (warmtepomp, cv en klimaat, elektra, loodgieter), dakdekkers, aannemers en verbouw, badkamerbedrijven, kozijnenbedrijven en vergelijkbare lokale vakbedrijven. Niet gericht op webshops, horeca of landelijke retail.
